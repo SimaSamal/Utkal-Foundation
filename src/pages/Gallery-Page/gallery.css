@@ -1,0 +1,770 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+  
+}
+
+/* Unique Navbar Styles */
+#unique-navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Fixed height */
+  background-color: #f5f6fa;
+  z-index: 1000; /* Ensure the navbar stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#unique-navbar {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+#unique-logo-container {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #011152;
+  display: flex;
+  margin-left: 20px;
+}
+.logoImg{
+  width: 110px;
+  height: 80px;
+  margin-top: 5px;
+
+}
+#unique-navbar-logo {
+  font-size: 1.5rem; /* Fixed font size */
+  width: 200px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  line-height: 50px; /* Vertically center the text */
+  text-align: center; /* Center the text horizontally */
+  margin-left: -20px;
+  margin-top: 20px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflow if the text exceeds the container size */
+  color: #011152; /* Text color */
+}
+
+#unique-nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.unique-nav-link {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #011152;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+#unique-donate-button {
+  background-color: #011152;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+#unique-donate-button:hover{
+  background-color:#0056b3;  
+  color: white;
+}
+
+/* Hamburger Button for Mobile */
+#unique-hamburger {
+  display: none; /* Hidden on larger screens */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Popup Menu for Mobile */
+#unique-popup-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh; /* Full viewport height */
+  width: 62.5%; /* Width of the popup */
+  background-color: #ffffff; /* Clean white background */
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px; /* Added top padding for better spacing */
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.15); /* Slight shadow for depth */
+  z-index: 999; /* Keep on top */
+  transform: translateX(100%); /* Initially off-screen */
+  transition: transform 0.3s ease-in-out; /* Smooth slide-in effect */
+}
+
+#unique-popup-menu.show {
+  transform: translateX(0); /* Slide in */
+}
+#popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#popup-header h2 {
+  color: #011152; /* Dark blue for consistency */
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4CAF50;
+}
+
+#unique-close-popup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #011152; /* Dark blue color for contrast */
+  cursor: pointer;
+}
+
+.unique-popup-nav-links {
+  list-style: none;
+  padding-top: 5px;
+  margin-top: -20px; /* Space below the close button */
+  width: 100%;
+  margin-left: -40px;
+}
+
+.unique-popup-link {
+  color: #011152; /* Dark blue color */
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 0;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #f0f0f5; /* Subtle border between links */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover transitions */
+}
+
+.unique-popup-link:hover {
+  background-color: rgba(1, 17, 82, 0.1); /* Light blue on hover */
+  color: #011152; /* Maintain dark blue text */
+  padding-left: 10px; /* Slide-in effect for text */
+}
+
+.unique-popup-link.active {
+  background-color: #011152; /* Highlight active menu item */
+  color: white; /* White text for contrast */
+  padding-left: 10px ;
+  border-radius: 4px; /* Rounded for better design */
+width: auto;
+}
+
+.unique-popup-donate-btn {
+  background-color: #011152;
+  color: white;
+  padding: 10px 20px; /* Reduced padding for smaller screens */
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-align:center;
+  width: 100%; /* Full width button */
+  display: inline-block;
+}
+
+/* Large screens (laptops/desktops) */
+@media (min-width: 1024px) {
+  .unique-popup-donate-btn {
+    padding: 10px 0;
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .unique-popup-donate-btn {
+    padding: 10px 0;
+    font-size: 1.4rem;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 767px) {
+  .unique-popup-donate-btn {
+    padding: 10px 0;
+    font-size: 1.2rem;
+  }
+}
+
+.unique-popup-donate-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Close button hover effect */
+#unique-close-popup:hover {
+  color: #0056b3; /* Lighter blue on hover */
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 220px) {
+  #unique-popup-menu {
+    width: 100%; /* Full screen for smaller devices */
+  }
+
+  .unique-popup-link {
+    font-size: 1.2rem; /* Smaller text size for mobile */
+    padding: 12px 0;
+  }
+
+  .unique-popup-donate-btn {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+}
+
+
+/* Hover Effect for Desktop Menu */
+.unique-nav-link:hover {
+  background-color: #011152; /* Blue background */
+  color: white; /* White text */
+  border: 2px solid #011152; /* Blue border */
+  border-radius: 5px; /* Optional: round the border slightly */
+  padding: 5px 10px; /* Adjust padding to account for border */
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+}
+
+/* Focus Effect for Clicked State */
+.unique-nav-link:focus {
+  background-color: #011152; /* Blue background */
+  color: white; /* White text */
+  border: 2px solid #011152; /* Blue border */
+  border-radius: 5px; /* Optional: round the border slightly */
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+}
+
+/* Hover Effect for Popup Menu */
+.unique-popup-link:hover {
+  background-color: #011152; /* Blue background */
+  color: white; /* White text */
+  border: 2px solid #011152; /* Blue border */
+  border-radius: 5px; /* Optional: round the border slightly */
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+}
+
+/* Focus Effect for Popup Clicked State */
+.unique-popup-link:focus {
+  background-color: #011152; /* Blue background */
+  color: white; /* White text */
+  border: 2px solid #011152; /* Blue border */
+  border-radius: 5px; /* Optional: round the border slightly */
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+}
+
+/* Active Menu Item Style */
+.unique-nav-link.active {
+  background-color: #011152; /* Blue background */
+  color: white; /* White text */
+  border: 2px solid #011152; /* Blue border */
+  border-radius: 5px; /* Optional: round the border */
+  padding: 5px 10px; /* Adjust padding to account for border */
+}
+
+/* Optional: to maintain hover and focus styles */
+.unique-nav-link.active:hover {
+  background-color: #011152;
+  color: white;
+}
+
+/* Optional: hover/focus for other non-active links */
+.unique-nav-link:hover {
+  background-color: rgba(1, 17, 82, 0.1);
+  color: #011152;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #unique-hamburger {
+    display: block;
+  }
+
+  #unique-nav-links {
+    display: none; /* Hide regular nav links on mobile */
+  }
+}
+@media (max-width: 425px) {
+  .logoImg{
+    width: 90px;
+    height: 65px;
+    margin-left: -30px;
+    margin-top: 12px;
+  
+  }
+  #unique-navbar-logo {
+    font-size: 1.2rem;
+    margin-left: -40px;
+
+  }
+}
+
+/* Header Styles 
+.galleryHead {
+    background: linear-gradient(135deg, #20bf55 0%, #01baef 100%);
+    color: white;
+    width: 100%;
+    top: 50px;
+    padding: 60px 20px; 
+    text-align: center;
+    position:relative;
+    z-index: 1;
+    
+    
+}
+.galleryHead .container{
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.galleryHead h1 {
+    font-size: 3rem; 
+    font-weight: 700; 
+    margin: 0;
+    letter-spacing: 2px; 
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); 
+    animation: fadeInDown 1s ease-out; 
+}
+
+.download-buttons {
+    margin-top: 40px; 
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.download-buttons a {
+    color: white;
+    background-color: #333;
+    padding: 12px 25px; 
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 50px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600; 
+}
+
+.download-buttons a:hover {
+    background-color: #555;
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3); 
+}
+
+/* Simple fade-in animations 
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image gallery with subtitles 
+.gallery-with-subtitles {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery-with-subtitles h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    
+    display: block;
+    border-radius: 6px 6px 0 0;
+}
+
+.gallery-item p {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+    */
+
+   /* Hero Section */
+.hero {
+  position: relative;
+  background-image: url('./Image/Gallery-Hero.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to make text visible */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero h1 {
+      font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 28px;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero h1 {
+      font-size: 36px;
+      padding: 0 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero h1 {
+      font-size: 36px;
+      padding: 0 5px;
+  }
+} 
+
+/* Popular Causes Section */
+.popular-causes {
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: -40px;
+}
+
+.popular-causes h1 {
+  font-size: 2rem;
+  color: #130561;
+  margin-bottom: 20px;
+}
+
+.causes-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cause-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.cause-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.cause-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2704c2;
+}
+
+/* Gallery Section */
+.gallery-container {
+  max-width: 1280px;
+  width: 100%; /* Adjusted to make the container more flexible */
+  margin: 20px auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 5 images per row */
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .gallery {
+      grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+  }
+  .cause-card {
+      width: 200px; /* Adjusted card width for tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+      grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+  }
+  .cause-card {
+      width: 180px; /* Smaller width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+      grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+  }
+  .cause-card {
+      width: 100%; /* Full width cards for mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery {
+      grid-template-columns: 1fr; /* 1 image per row */
+  }
+  .cause-card {
+      width: 100%; /* Full width on mobile devices */
+  }
+}
+
+/* Footer Styles */
+.utkalfoundation-footer {
+  background-color: #000000;
+  padding: 30px 0;
+}
+
+.utkalfoundation-footer-container {
+  display: grid;
+  gap: 20px;
+  max-width: 1024px; /* Max-width remains 1024px */
+  margin: 0 auto;
+  padding: 20px 0;
+  grid-template-columns: 1fr; /* Default: 1 column for mobile screens */
+}
+
+/* Target the last footer section for full-width layout on smaller screens */
+@media (max-width: 768px) {
+  .utkalfoundation-footer-container .utkalfoundation-footer-section:last-child {
+    grid-column: span 1; /* Default for 1-column layout */
+  }
+}
+
+/* Ensure it spans all columns for tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .utkalfoundation-footer-container .utkalfoundation-footer-section:last-child {
+    grid-column: span 3; /* Span across all 3 columns */
+  grid-template-columns: repeat(3, 1fr); /* 3 equally spaced columns */
+  }
+}
+
+
+/* 3 columns for tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .utkalfoundation-footer-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 equally spaced columns */
+  }
+}
+
+/* Smaller columns for larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .utkalfoundation-footer-container {
+    grid-template-columns: repeat(4, minmax(150px, 1fr)); /* Smaller columns with a minimum size */
+    gap: 15px; /* Reduced gap to accommodate smaller column widths */
+  }
+}
+
+.utkalfoundation-footer-section {
+  padding: 10px; /* Reduced padding for smaller column sizes */
+  
+}
+
+@media (max-width:768px){
+  .utkalfoundation-footer-section {
+      text-align: center;
+  }
+  .utkalfoundation-footer-section h2 {
+      text-align: left;
+  }
+}
+
+.utkalfoundation-footer-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.8em; /* Adjusted font size */
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.utkalfoundation-footer-section h2,
+.utkalfoundation-footer-section h3,
+.utkalfoundation-footer-section p {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.utkalfoundation-footer-section p,
+.utkalfoundation-footer-section ul {
+  color: grey;
+  line-height: 1.7;
+}
+
+.utkalfoundation-footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.utkalfoundation-link-item,
+.utkalfoundation-campaign-item {
+  margin-bottom: 10px;
+}
+
+.utkalfoundation-link-item a,
+.utkalfoundation-campaign-item a {
+  color: #cbd5e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: smaller;
+}
+
+.utkalfoundation-link-item a:hover,
+.utkalfoundation-campaign-item a:hover {
+  color: #0f2da4;
+}
+
+.utkalfoundation-contact i {
+  margin-right: 10px;
+}
+
+.utkalfoundation-donate-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #011152;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.utkalfoundation-donate-btn:hover {
+  background-color: #0f2da4;
+}
+
+.utkalfoundation-footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #0f1b24;
+}
+
+.utkalfoundation-footer-bottom p {
+  color: #94a3b8;
+}
+
+.utkalfoundation-footer-bottom a {
+  color: #0f2da4;
+  text-decoration: none;
+}
+
+.utkalfoundation-footer-bottom a:hover {
+  color: #0f2da4;
+}
+
+.utkalfoundation-social-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.utkalfoundation-social-links a {
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.utkalfoundation-social-links a:hover {
+  color: #0f2da4;
+}

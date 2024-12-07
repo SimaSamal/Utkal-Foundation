@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function(){
+       emailjs.init({
+         publicKey: "GlEhPMHIWPj-e7Zna",
+       });
+    })();
+ </script>
+
+  </head>
+<body>
+    
+    <header id="unique-navbar-header">
+        <nav id="unique-navbar" class="unique-navbar-container">
+          <div id="unique-logo-container" class="unique-logo">
+            <img src="/src/assets/images/Logo_Utkal.png" alt="logoImg" class="logoImg">
+            <h1 id="unique-navbar-logo">Utkal Foundation</h1>
+          </div>
+          <!-- Navigation Links -->
+          <ul id="unique-nav-links" class="unique-nav-list">
+            <li><a href="/index.html" class="unique-nav-link">Home</a></li>
+            <li><a href="/src/pages/AboutPage/about.html" class="unique-nav-link">About</a></li>
+            <li><a href="/src/pages/OurWork/work.html" class="unique-nav-link">Work</a></li>
+            <li><a href="/src/pages/Gallery-Page/gallery.html" class="unique-nav-link">Gallery</a></li>
+            <li><a href="/src/pages/Members/members.html" class="unique-nav-link">Members</a></li>
+            <li><a href="/src/pages/contactPage/contact.html" class="unique-nav-link active">Contact</a></li>
+            <li><a href="/src/pages/Members/members.html" id="unique-donate-button" class="unique-donate-btn">Donate</a></li>
+          </ul>
+          <!-- Hamburger Button for Mobile -->
+          <button id="unique-hamburger" class="unique-hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+        
+        <!-- Popup Menu (hidden by default) -->
+        <div id="unique-popup-menu" class="unique-popup-menu hidden">
+          <div id="popup-header">
+            <h2>MENU</h2>
+          <!-- Close Button for Popup -->
+          <button id="unique-close-popup" class="unique-close-popup">
+            <i class="fas fa-times"></i> <!-- Cross (Close) Icon -->
+          </button>
+          </div>
+          <ul id="unique-popup-links" class="unique-popup-nav-links">
+            <li><a href="/index.html" class="unique-popup-link">Home</a></li>
+            <li><a href="/src/pages/AboutPage/about.html" class="unique-popup-link">About</a></li>
+            <li><a href="/src/pages/OurWork/work.html" class="unique-popup-link">Work</a></li>
+            <li><a href="/src/pages/Gallery-Page/gallery.html" class="unique-popup-link">Gallery</a></li>
+            <li><a href="/src/pages/Members/members.html" class="unique-popup-link">Members</a></li>
+            <li><a href="/src/pages/contactPage/contact.html" class="unique-popup-link active">Contact</a></li>
+            <li><a href="/src/pages/Members/members.html" id="unique-popup-donate-btn" class="unique-popup-donate-btn">Donate</a></li>
+          </ul>
+        </div>
+      </header>
+      
+    
+    <!-- Clickable area to close the popup menu -->
+    <div class="overlay hidden"></div>
+    <script>
+
+
+
+              // Get the current page URL
+const currentUrl = window.location.pathname;
+
+// Get all the navigation links
+const navLinks = document.querySelectorAll('.unique-nav-link');
+
+// Loop through each link and compare href with current URL
+navLinks.forEach(link => {
+  if (link.getAttribute('href') === currentUrl) {
+    link.classList.add('active');
+  }
+});
+
+
+
+        // Toggle popup menu on hamburger click
+document.getElementById("unique-hamburger").addEventListener("click", function() {
+  document.getElementById("unique-popup-menu").classList.toggle("show");
+});
+
+// Close popup when close button is clicked
+document.getElementById("unique-close-popup").addEventListener("click", function() {
+  document.getElementById("unique-popup-menu").classList.remove("show");
+});
+
+    </script>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            
+        </div>
+    </section>
+    
+    <div class="contact-container">
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="" method="post" id="contactForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter FirstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter LastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="youremail@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Phone No." required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message..." rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h2>Our Address</h2>
+            <p>Utkal Foundation<br> 
+                Bhandari Pokhari,<br> 
+                Bhadrak, Odisha,<br> 
+                India - 756100<br> 
+                Phone: +91 797-823-0576<br>
+                Email: info@utkalfoudation.in
+            </p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119923.55545213695!2d85.77509920137796!3d20.29605869441308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909e1b003c1f9%3A0x9cfcff29d63fe3c1!2sBhubaneswar%2C%20Odisha%2C%20India!5e0!3m2!1sen!2sus!4v1603708459989!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="/src/js/utils/footer.js"></script>
+    <script src="/src/js/nav.js"></script>
+    <script src="contact.js"></script>
+    
+   
+   <script>
+       
+      // Handle the form submission
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  // Collect the form data
+  var formData = new FormData(this);
+
+ 
+
+          // Send the form data using EmailJS
+          emailjs.send("service_awbh0ym", "template_spxgx1c", {
+              name: formData.get('firstName'),
+              lastName: formData.get('lastName'),
+              email: formData.get('email'),
+              phone: formData.get('phone'),
+              message: formData.get('message'),
+          })
+          .then(function(response) {
+              alert('SUCCESS! ');
+          }, function(error) {
+              alert('FAILED... ' + error);
+          });
+      });
+
+  </script>
+
+
+
+</body>
+</html>

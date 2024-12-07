@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Members</title>
+    <link rel="stylesheet" href="members.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+</head>
+<body>
+    
+    <header id="unique-navbar-header">
+        <nav id="unique-navbar" class="unique-navbar-container">
+          <div id="unique-logo-container" class="unique-logo">
+            <img src="/src/assets/images/Logo_Utkal.png" alt="logoImg" class="logoImg">
+            <h1 id="unique-navbar-logo">Utkal Foundation</h1>
+          </div>
+          <!-- Navigation Links -->
+          <ul id="unique-nav-links" class="unique-nav-list">
+            <li><a href="/index.html" class="unique-nav-link">Home</a></li>
+            <li><a href="/src/pages/AboutPage/about.html" class="unique-nav-link">About</a></li>
+            <li><a href="/src/pages/OurWork/work.html" class="unique-nav-link">Work</a></li>
+            <li><a href="/src/pages/Gallery-Page/gallery.html" class="unique-nav-link">Gallery</a></li>
+            <li><a href="/src/pages/Members/members.html" class="unique-nav-link active">Members</a></li>
+            <li><a href="/src/pages/contactPage/contact.html" class="unique-nav-link">Contact</a></li>
+            <li><a href="/src/pages/Members/members.html" id="unique-donate-button" class="unique-donate-btn">Donate</a></li>
+          </ul>
+          <!-- Hamburger Button for Mobile -->
+          <button id="unique-hamburger" class="unique-hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+        
+        <!-- Popup Menu (hidden by default) -->
+        <div id="unique-popup-menu" class="unique-popup-menu hidden">
+            <div id="popup-header">
+                <h2>MENU</h2>
+          <!-- Close Button for Popup -->
+          <button id="unique-close-popup" class="unique-close-popup">
+            <i class="fas fa-times"></i> <!-- Cross (Close) Icon -->
+          </button>
+          </div>
+          <ul id="unique-popup-links" class="unique-popup-nav-links">
+            <li><a href="/index.html" class="unique-popup-link">Home</a></li>
+            <li><a href="/src/pages/AboutPage/about.html" class="unique-popup-link">About</a></li>
+            <li><a href="/src/pages/OurWork/work.html" class="unique-popup-link">Work</a></li>
+            <li><a href="/src/pages/Gallery-Page/gallery.html" class="unique-popup-link">Gallery</a></li>
+            <li><a href="/src/pages/Members/members.html" class="unique-popup-link active">Members</a></li>
+            <li><a href="/src/pages/contactPage/contact.html" class="unique-popup-link">Contact</a></li>
+            <li><a href="/src/pages/Members/members.html" id="unique-popup-donate-btn" class="unique-popup-donate-btn">Donate</a></li>
+          </ul>
+        </div>
+      </header>
+      
+    
+    <!-- Clickable area to close the popup menu -->
+    <div class="overlay hidden"></div>
+    <script>
+
+        
+                // Get the current page URL
+const currentUrl = window.location.pathname;
+
+// Get all the navigation links
+const navLinks = document.querySelectorAll('.unique-nav-link');
+
+// Loop through each link and compare href with current URL
+navLinks.forEach(link => {
+  if (link.getAttribute('href') === currentUrl) {
+    link.classList.add('active');
+  }
+});
+
+
+
+        // Toggle popup menu on hamburger click
+document.getElementById("unique-hamburger").addEventListener("click", function() {
+  document.getElementById("unique-popup-menu").classList.toggle("show");
+});
+
+// Close popup when close button is clicked
+document.getElementById("unique-close-popup").addEventListener("click", function() {
+  document.getElementById("unique-popup-menu").classList.remove("show");
+});
+
+    </script>
+    
+
+    <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Membership</h1>
+        
+    </div>
+</section>
+
+
+
+<!--container-->
+<div class="pricing-container">
+    <h1>Choose Your Donation Plan</h1>
+    
+    <div class="pricing-cards">
+      <div class="card basic">
+        <div class="icon-wrapper">
+            <img src="/src/assets/images/silver.png" alt="silver">
+        </div>
+        <h2 class="plan">Silver</h2>
+        <p class="price">&#8377;1500<span>/Year</span></p>
+        <p class="feature">
+            Every contribution makes a difference. By choosing the Silver Plan, you help us with essential support to sustain our operations and continue outreach programs.
+        </p>
+        <button class="btn"><a href="#multiStepForm">Choose Plan</a></button>
+      </div>
+      
+      <div class="card professional">
+        <div class="icon-wrapper">
+            <img src="/src/pages/Members/MemberImg/gold.png" alt="gold">
+        </div>
+        <h2 class="plan">Gold</h2>
+        <p class="price">&#8377;2000<span>/Year</span></p>
+        <p class="feature">
+            Make an even greater impact with the Gold Plan. Your support empowers us to expand our reach and bring more substantial help to those who need it most.
+        </p>
+        <button class="btn"><a href="#multiStepForm">Choose Plan</a></button>
+      </div>
+      
+      <div class="card team">
+        <div class="icon-wrapper">
+            <img src="/src/pages/Members/MemberImg/platinum.png" alt="platinum">
+        </div>
+        <h2 class="plan">Platinum</h2>
+        <p class="price">&#8377;2500<span>/Year</span></p>
+        <p class="feature">
+            Join us as a leading supporter in the Platinum Plan. Your generous contribution allows us to launch new projects and drive sustainable change in the community.
+
+        </p>
+        <button class="btn"><a href="#multiStepForm">Choose Plan</a></button>
+      </div>
+    </div>
+    
+    <!-- Animated Elements -->
+    <div class="waves"></div>
+    <div class="stars"></div>
+    <!-- Floating Bubbles -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+  
+    <!-- About Us Section -->
+    <section class="works">
+        <h1>Choose Your Impact Level</h1>
+        <h2>Support, Sustain, and Transform Lives with Your Contribution</h2>
+        <p>Your support provides essential resources to those who need them most, from school supplies and food packages to health kits that offer immediate relief to families in need. Beyond meeting basic needs, your contribution funds skill-building workshops, medical camps, and clean water projects that equip communities with the tools and knowledge for sustainable growth. At the highest level, your generosity enables transformative projects like building schools, healthcare centers, and sustainable farming systems, creating lasting change and empowering communities for generations to come.</p>
+    </section>
+
+    <div class="container">
+        <h2>Multi-Step Form</h2>
+        <!-- Step navigation -->
+        <div class="steps">
+            <div class="step" id="step-profile" onclick="showSection(0)">Profile</div>
+            <div class="step" id="step-membership" onclick="showSection(1)">Membership</div>
+            <div class="step" id="step-documents" onclick="showSection(2)">Documents</div>
+            <div class="step" id="step-payment" onclick="showSection(3)">Payment</div>
+        </div>
+
+        <!-- Form sections -->
+        <form id="multiStepForm">
+            <!-- Profile Section -->
+<fieldset class="section" id="section-profile">
+    <legend>Profile Section</legend>
+    <div class="form-group">
+        <label for="Name">Name:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Name" required>
+    </div>
+    <div class="form-group">
+        <label for="Father's Name">Father's Name:</label>
+        <input type="text" id="fatherName" name="fatherName" placeholder="Father's Name" required>
+    </div>
+    <div class="form-group">
+        <label for="Mother's Name">Mother's Name:</label>
+        <input type="text" id="motherName" name="motherName" placeholder="Mother's Name" required>
+    </div>
+    <div class="form-group">
+        <label for="DOB">DOB:</label>
+        <input type="date" id="dob" name="dob" required>
+    </div>
+    <div class="form-group">
+        <label for="Phone Number">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+    </div>
+    <div class="form-group">
+        <label for="Address">Address:</label>
+        <textarea id="address" name="address" placeholder="Address" rows="2" required></textarea>
+    </div>
+    
+</fieldset>
+
+
+            <!-- Membership Section -->
+            <fieldset class="section" id="section-membership">
+                <legend>Membership Section</legend>
+                <div class="form-group">
+                    <label>Select Membership Amount:</label>
+                    <select id="membershipAmount" name="membershipAmount" required>
+                        <option value="">Select Membership Amount</option>
+                        <option value="100">₹100</option>
+                        <option value="200">₹200</option>
+                        <option value="500">₹500</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Document Section -->
+            <fieldset class="section" id="section-document">
+                <legend>Document Section</legend>
+                <div class="form-group">
+                    <label for="Aadhar">Aadhar Number:</label>
+                    <input type="text" id="aadhar" name="aadhar" placeholder="Aadhar Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Upload Photo:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+            </fieldset>
+
+            <!-- Payment Section -->
+            <fieldset class="section" id="section-payment">
+                <legend>Payment Section</legend>
+                <div class="form-group">
+                    <label>Scan and Pay (Use QR Code)</label>
+                    <br>
+                    <img src="/src/pages/Members/MemberImg/qrcode.png" alt="QR Code" width="150" height="150"><br>
+                    <label for="photo">Upload Payment Screenshot:</label>
+                    <input type="file" id="file_base64" name="photo" accept="image/*" required>
+                </div>
+            </fieldset>
+
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <button type="button" id="prevBtn" onclick="prevSection()">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextSection()">Next</button>
+            </div>
+        </form>
+    </div>
+
+
+    <section id="news-section" class="latest-news">
+        <div class="news-container">
+            <h2>Membership Coordinator </h2>
+            <div class="article-list">
+                <!-- Article 1 -->
+                <article id="article-1" class="news-item">
+                    <img src="./portrait-confident-young-girl.jpg" alt="Article Image 1" class="article-image">
+                    <div class="article-details">
+                        <h3>Arjun Singh</h3>
+                        <p>Another brief excerpt that captures readers' attention and makes them want to learn more.</p>
+                        <address>Cuttack ,Odisha,Pin-759057 </address>            
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article id="article-2" class="news-item">
+                    <img src="./image.webp" alt="Article Image 2" class="article-image">
+                    <div class="article-details">
+                        <h3>Arjun Singh</h3>
+                        <p>Another brief excerpt that captures readers' attention and makes them want to learn more.</p>
+                        <address>Cuttack ,Odisha,Pin-759057 </address> 
+                    </div>
+                </article>
+    
+                <!-- Article 3 -->
+                <article id="article-3" class="news-item">
+                    <img src="./image.webp" alt="Article Image 3" class="article-image">
+                    <div class="article-details">
+                        <h3>Arjun Singh</h3>
+                        <p>Another brief excerpt that captures readers' attention and makes them want to learn more.</p>
+                        <address>Cuttack ,Odisha,Pin-759057 </address> 
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+<!--categories
+    <section class="contest-categories">
+        <div class="container">
+            <div class="section-header">
+                <h4>OUR CATEGORIES</h4>
+                <h2>Check Out <span class="highlight">Popular Contest Categories</span></h2>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-header">
+                        <img src="hero.jpg" alt="Nature Pic Icon" class="icon">
+                        <div>
+                            <h3>Nature Pic Contest</h3>
+                            <p><span class="contest-count">126</span> Available Contests</p>
+                        </div>
+                    </div>
+                    <img src="nature-pic.jpg" alt="Nature Pic" class="category-image">
+                    <a href="#" class="browse-btn">Browse Nature Pic Contests</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-header">
+                        <img src="random-icon.png" alt="Random Pic Icon" class="icon">
+                        <div>
+                            <h3>Random Pic Contest</h3>
+                            <p><span class="contest-count">116</span> Available Contests</p>
+                        </div>
+                    </div>
+                    <img src="random-pic.jpg" alt="Random Pic" class="category-image">
+                    <a href="#" class="browse-btn">Browse Random Pic Contests</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-header">
+                        <img src="portrait-icon.png" alt="Portrait Pic Icon" class="icon">
+                        <div>
+                            <h3>Portrait Pic Contest</h3>
+                            <p><span class="contest-count">164</span> Available Contests</p>
+                        </div>
+                    </div>
+                    <img src="portrait-pic.jpg" alt="Portrait Pic" class="category-image">
+                    <a href="#" class="browse-btn">Browse Portrait Pic Contests</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-header">
+                        <img src="space-icon.png" alt="Space Pic Icon" class="icon">
+                        <div>
+                            <h3>Space Pic Contest</h3>
+                            <p><span class="contest-count">135</span> Available Contests</p>
+                        </div>
+                    </div>
+                    <img src="space-pic.jpg" alt="Space Pic" class="category-image">
+                    <a href="#" class="browse-btn">Browse Space Pic Contests</a>
+                </div>
+            </div>
+
+            <div class="all-categories-btn">
+                <a href="#" class="btn-primary">Discover All Categories</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="hero.jpg" alt="Custom Illustration">
+                <h3>Custom Illustration</h3>
+                <p>For an international ad campaign.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="3-color-poster.png" alt="3 Color Poster Design">
+                <h3>3 Color Poster Design</h3>
+                <p>For a regional festival event.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ink-pen-illustration.png" alt="Ink Pen Illustration">
+                <h3>Ink Pen Illustration</h3>
+                <p>Created for a best-selling children's book.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="red-car.png" alt="Custom Illustration">
+                <h3>Custom Illustration</h3>
+                <p>For an international ad campaign.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="icon-design.png" alt="Icon Design">
+                <h3>Icon Design</h3>
+                <p>Classic retro style illustrations.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="animation-cell.png" alt="Animation Cell">
+                <h3>Animation Cell</h3>
+                <p>Creative storyboard illustration.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="hero.jpg" alt="Poster Ad Campaign">
+                <h3>Poster Ad Campaign</h3>
+                <p>Required ad for a local company.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="magazine-ad.png" alt="Magazine Ad">
+                <h3>Magazine Ad</h3>
+                <p>For an international ad campaign.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="magazine-ad.png" alt="Magazine Ad">
+                <h3>Magazine Ad</h3>
+                <p>For an international ad campaign.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="magazine-ad.png" alt="Magazine Ad">
+                <h3>Magazine Ad</h3>
+                <p>For an international ad campaign.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="hero.jpg" alt="Magazine Ad">
+                <h3>Magazine Ad</h3>
+                <p>For an international ad campaign.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="magazine-ad.png" alt="Magazine Ad">
+                <h3>Magazine Ad</h3>
+                <p>For an international ad campaign.</p>
+            </div>
+        </div>
+    </section>-->
+   
+
+    <div id="footer"></div>
+    <script src="/src/pages/Members/form.js"></script>
+    <script src="/src/js/utils/footer.js"></script>
+    <script src="/src/js/nav.js"></script>
+
+</body>
+</html>

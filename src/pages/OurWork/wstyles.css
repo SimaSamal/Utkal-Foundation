@@ -1,0 +1,694 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/*NavBar*/
+/* Unique Navbar Styles */
+#unique-navbar-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Fixed height */
+    background-color: #f5f6fa;
+    z-index: 1000; /* Ensure the navbar stays on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #unique-navbar {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  #unique-logo-container {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #011152;
+    display: flex;
+  }
+  .logoImg{
+    width: 110px;
+    height: 80px;
+  
+  }
+  #unique-navbar-logo {
+    font-size: 1.5rem; /* Fixed font size */
+    width: 200px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    line-height: 50px; /* Vertically center the text */
+    text-align: center; /* Center the text horizontally */
+    margin-left: -20px;
+    margin-top: 15px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflow if the text exceeds the container size */
+    color: #011152; /* Text color */
+  }
+  
+  #unique-nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .unique-nav-link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #011152;
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+  
+  #unique-donate-button {
+    background-color: #011152;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+  
+  #unique-donate-button:hover{
+    background-color:#0056b3;  
+    color: white;
+  }
+
+  /* Hamburger Button for Mobile */
+  #unique-hamburger {
+    display: none; /* Hidden on larger screens */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Popup Menu for Mobile */
+#unique-popup-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh; /* Full viewport height */
+    width: 75%; /* Width of the popup */
+    background-color: #ffffff; /* Clean white background */
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px; /* Added top padding for better spacing */
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.15); /* Slight shadow for depth */
+    z-index: 999; /* Keep on top */
+    transform: translateX(100%); /* Initially off-screen */
+    transition: transform 0.3s ease-in-out; /* Smooth slide-in effect */
+  }
+  
+  #unique-popup-menu.show {
+    transform: translateX(0); /* Slide in */
+  }
+  #popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #popup-header h2 {
+    color: #011152; /* Dark blue for consistency */
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+  }
+  
+  #unique-close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #011152; /* Dark blue color for contrast */
+    cursor: pointer;
+  }
+  
+  .unique-popup-nav-links {
+    list-style: none;
+    padding-top: 5px;
+    margin-top: -4px; /* Space below the close button */
+    width: 100%;
+  }
+  
+  .unique-popup-link {
+    color: #011152; /* Dark blue color */
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #f0f0f5; /* Subtle border between links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover transitions */
+  }
+  
+  .unique-popup-link:hover {
+    background-color: rgba(1, 17, 82, 0.1); /* Light blue on hover */
+    color: #011152; /* Maintain dark blue text */
+    padding-left: 10px; /* Slide-in effect for text */
+  }
+  
+  .unique-popup-link.active {
+    background-color: #011152; /* Highlight active menu item */
+    color: white; /* White text for contrast */
+    padding-left: 10px;
+    border-radius: 4px; /* Rounded for better design */
+    padding: 5px;
+  }
+  
+  .unique-popup-donate-btn {
+    background-color: #011152;
+    color: white;
+    padding: 10px 20px; /* Reduced padding for smaller screens */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%; /* Full width button */
+    display: inline-block;
+  }
+  
+  /* Large screens (laptops/desktops) */
+  @media (min-width: 1024px) {
+    .unique-popup-donate-btn {
+      padding: 10px 50px;
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Medium screens (tablets) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .unique-popup-donate-btn {
+      padding: 5px;
+      font-size: 1.4rem;
+    }
+  }
+  
+  /* Small screens (phones) */
+  @media (max-width: 767px) {
+    .unique-popup-donate-btn {
+      font-size: 1.2rem;
+      padding: 5px;
+    }
+  }
+  
+  
+  .unique-popup-donate-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Close button hover effect */
+  #unique-close-popup:hover {
+    color: #0056b3; /* Lighter blue on hover */
+  }
+  
+  /* Responsive Styles for smaller screens */
+  @media (max-width: 220px) {
+    #unique-popup-menu {
+      width: 100%; /* Full screen for smaller devices */
+    }
+  
+    .unique-popup-link {
+      font-size: 1.2rem; /* Smaller text size for mobile */
+      padding: 12px 0;
+    }
+  
+    .unique-popup-donate-btn {
+      font-size: 1.2rem;
+      padding: 12px 20px;
+    }
+  }
+  
+  
+  /* Hover Effect for Desktop Menu */
+.unique-nav-link:hover {
+    background-color: #011152; /* Blue background */
+    color: white; /* White text */
+    border: 2px solid #011152; /* Blue border */
+    border-radius: 5px; /* Optional: round the border slightly */
+    padding: 5px 10px; /* Adjust padding to account for border */
+    transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+  }
+  
+  /* Focus Effect for Clicked State */
+  .unique-nav-link:focus {
+    background-color: #011152; /* Blue background */
+    color: white; /* White text */
+    border: 2px solid #011152; /* Blue border */
+    border-radius: 5px; /* Optional: round the border slightly */
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+  }
+  
+  /* Hover Effect for Popup Menu */
+  .unique-popup-link:hover {
+    background-color: #011152; /* Blue background */
+    color: white; /* White text */
+    border: 2px solid #011152; /* Blue border */
+    border-radius: 5px; /* Optional: round the border slightly */
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+  }
+  
+  /* Focus Effect for Popup Clicked State */
+  .unique-popup-link:focus {
+    background-color: #011152; /* Blue background */
+    color: white; /* White text */
+    border: 2px solid #011152; /* Blue border */
+    border-radius: 5px; /* Optional: round the border slightly */
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+  }
+  
+  /* Active Menu Item Style */
+  .unique-nav-link.active {
+    background-color: #011152; /* Blue background */
+    color: white; /* White text */
+    border: 2px solid #011152; /* Blue border */
+    border-radius: 5px; /* Optional: round the border */
+    padding: 5px 10px; /* Adjust padding to account for border */
+  }
+  
+  /* Optional: to maintain hover and focus styles */
+  .unique-nav-link.active:hover{
+    background-color: #011152;
+    color: white;
+  }
+  
+  /* Optional: hover/focus for other non-active links */
+  .unique-nav-link:hover {
+    background-color: rgba(1, 17, 82, 0.1);
+    color: #011152;
+  }
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    #unique-hamburger {
+      display: block;
+    }
+  
+    #unique-nav-links {
+      display: none; /* Hide regular nav links on mobile */
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .logoImg{
+      width: 90px;
+      height: 65px;
+      margin-left: -10px;
+      margin-top: 4px;
+    
+    }
+    #unique-navbar-logo {
+      font-size: 1.2rem;
+      margin-left: -40px;
+      margin-top: 12px;
+  
+    }
+  }
+
+  /* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('./WorkImg/about-1.webp'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to make text visible */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero h1 {
+        font-size: 36px;
+        padding: 0 10px;
+    
+    }
+}
+
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 36px;
+        padding: 0 5px;
+    }
+}
+
+/* Global container to control max-width and padding */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    
+    width: 100%;
+}
+
+/* works Section */
+.works {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #fff3e0;
+    width: 100%;
+}
+
+.works h1 {
+    
+    margin-bottom: 10px;
+    color: #011152;
+}
+
+.works p {
+    color: #666;
+    margin-bottom: 40px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Full-Width Background Image Section */
+.images-section {
+    background-color: #f0f0f0;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    gap: 6px;
+    max-width: 1280px;
+    margin: 0 auto; /* Center the images inside the section */
+    padding: 0 1rem;
+}
+
+.images img {
+    width: 32%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive design for the image section */
+@media (max-width: 768px) {
+    .images {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .images img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+/* Work */
+
+/* Global Styles */
+.containers {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Add padding for responsiveness */
+}
+
+.content-row{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.content-box {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.content-box:hover {
+  background-color: #D1E9F6;
+}
+
+.image-container {
+  width: 100%;
+  height: 250px; /* Set a fixed height */
+  border: 2px solid #011152;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  transition: transform 0.4s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s ease-in-out;
+}
+
+
+.content h1 {
+  font-size: 1.25em;
+  color: #011152;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.content p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-box {
+      flex: 1 1 30%;
+  }
+  .content h1 {
+    font-size: 1rem; /* Equivalent to 16px */
+}
+.content p {
+    font-size: 0.875rem; /* Equivalent to 14px */
+}
+}
+
+@media (max-width: 768px) {
+  .containers {
+      flex-direction: column;
+  }
+
+  .content-box {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .image-container {
+      width: 100%;
+  }
+}
+
+/* Idea Delivery Section */
+.idea-delivery {
+    padding: 40px 0;
+    background-color: #fff;
+    width: 100%;
+}
+
+.idea-delivery h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.idea-delivery .content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin: 30px;
+}
+
+.idea-delivery p {
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+   
+}
+
+/* Responsive design for idea delivery section */
+@media (max-width: 768px) {
+    .idea-delivery .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .idea-delivery p {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .idea-delivery h2{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+/* Idea Delivery Section 2 */
+.idea-delivery2 {
+    padding: 60px 0;
+    background-color: #e9b4b4;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.idea-delivery2 h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #070583;
+    font-weight: bold;
+}
+
+.idea-delivery2 .contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.idea-delivery2 p {
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Button group styles */
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #011152;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #3b2fed;
+}
+
+.btn-secondary {
+    background-color: #109d15;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: #11d358;
+}
+
+/* Responsive design for idea delivery section 2 */
+@media (max-width: 768px) {
+    .idea-delivery2 .contents {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .idea-delivery2 p {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}

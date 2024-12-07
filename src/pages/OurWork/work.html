@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work</title>
+    <link rel="stylesheet" href="wstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="unique-navbar-header">
+        <nav id="unique-navbar" class="unique-navbar-container">
+          <div id="unique-logo-container" class="unique-logo">
+            <img src="/src/assets/images/Logo_Utkal.png" alt="logoImg" class="logoImg">
+            <h1 id="unique-navbar-logo">Utkal Foundation</h1>
+          </div>
+          <!-- Navigation Links -->
+          <ul id="unique-nav-links" class="unique-nav-list">
+            <li><a href="/index.html" class="unique-nav-link">Home</a></li>
+            <li><a href="/src/pages/AboutPage/about.html" class="unique-nav-link">About</a></li>
+            <li><a href="/src/pages/OurWork/work.html" class="unique-nav-link active">Work</a></li>
+            <li><a href="/src/pages/Gallery-Page/gallery.html" class="unique-nav-link">Gallery</a></li>
+            <li><a href="/src/pages/Members/members.html" class="unique-nav-link">Members</a></li>
+            <li><a href="/src/pages/contactPage/contact.html" class="unique-nav-link">Contact</a></li>
+            <li><a href="/src/pages/Members/members.html" id="unique-donate-button" class="unique-donate-btn">Donate</a></li>
+          </ul>
+          <!-- Hamburger Button for Mobile -->
+          <button id="unique-hamburger" class="unique-hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+        
+        <!-- Popup Menu (hidden by default) -->
+        <div id="unique-popup-menu" class="unique-popup-menu hidden">
+            <div id="popup-header">
+                <h2>MENU</h2>
+          <!-- Close Button for Popup -->
+          <button id="unique-close-popup" class="unique-close-popup">
+            <i class="fas fa-times"></i> <!-- Cross (Close) Icon -->
+          </button>
+          </div>
+          <ul id="unique-popup-links" class="unique-popup-nav-links">
+            <li><a href="/index.html" class="unique-popup-link">Home</a></li>
+            <li><a href="/src/pages/AboutPage/about.html" class="unique-popup-link">About</a></li>
+            <li><a href="/src/pages/OurWork/work.html" class="unique-popup-link active">Work</a></li>
+            <li><a href="/src/pages/Gallery-Page/gallery.html" class="unique-popup-link">Gallery</a></li>
+            <li><a href="/src/pages/Members/members.html" class="unique-popup-link">Members</a></li>
+            <li><a href="/src/pages/contactPage/contact.html" class="unique-popup-link">Contact</a></li>
+            <li><a href="/src/pages/Members/members.html" id="unique-popup-donate-btn" class="unique-popup-donate-btn">Donate</a></li>
+          </ul>
+        </div>
+      </header>
+      
+    
+    <!-- Clickable area to close the popup menu -->
+    <div class="overlay hidden"></div>
+    <script>
+
+
+                // Get the current page URL
+const currentUrl = window.location.pathname;
+
+// Get all the navigation links
+const navLinks = document.querySelectorAll('.unique-nav-link');
+
+// Loop through each link and compare href with current URL
+navLinks.forEach(link => {
+  if (link.getAttribute('href') === currentUrl) {
+    link.classList.add('active');
+  }
+});
+
+
+
+        // Toggle popup menu on hamburger click
+document.getElementById("unique-hamburger").addEventListener("click", function() {
+  document.getElementById("unique-popup-menu").classList.toggle("show");
+});
+
+// Close popup when close button is clicked
+document.getElementById("unique-close-popup").addEventListener("click", function() {
+  document.getElementById("unique-popup-menu").classList.remove("show");
+});
+
+    </script>
+
+      <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our Works</h1>
+            
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- About Us Section -->
+        <section class="works">
+            <h1>Our Contribution</h1>
+            <h2>Transforming Lives, Building a Brighter Future</h2>
+            <p>At Utkal Foundation, we are dedicated to uplifting underprivileged communities through various social welfare initiatives. Since our inception in 2012, our mission has been to make a positive and lasting impact in education, healthcare, environmental conservation, and community development.</p>
+        </section>
+
+        <!-- Images Section -->
+        <section class="images-section">
+            <div class="images">
+                <img src="./WorkImg/Image-1.webp" alt="Team working together">
+                <img src="./WorkImg/image-2.webp" alt="Collaborative discussion">
+                <img src="./WorkImg/image-3.webp" alt="Project planning">
+            </div>
+        </section>
+
+        <!-- Idea Delivery Section -->
+        <section class="idea-delivery">
+            <h2>Empowering Communities and Driving Sustainable Change</h2>
+            <div class="content">
+                <p>Committed to sustainable development, the Utkal Foundation also plays a crucial role in promoting environmental 
+                    awareness and conservation. Its large-scale tree plantation campaigns, community clean-up drives, and eco-friendly 
+                    projects are designed to engage local populations in environmental stewardship and reduce the impact of climate change. 
+                Through a combination of grassroots efforts and strategic partnerships, the foundation strives to create lasting change and build stronger, 
+                more resilient communities. Guided by values of compassion and empowerment, the Utkal Foundation continues to make a
+                        tangible difference in the lives of those it serves, fostering hope and opportunity for a brighter future.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                           consequat.</p>
+           </div>
+        </section>
+      <!-- Work  -->  
+      <section class="content-row">
+        <div class="containers">
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image1.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>1. Educational Support</h1>
+                    <p>We believe every child deserves a good education. We help by providing educational accessories, and learning opportunities to children who need them most. Our goal is to ensure that every child has the resources and support to learn, grow, and succeed.</p>
+ 
+                </div>
+            </div>
+    
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image2.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>2. Healthcare Services</h1>
+                    <p>We offer free health checkups and organize eye camps to bring healthcare to those who don’t have easy access to doctors. We also raise awareness about health issues, making sure people know how to stay healthy.</p>
+                   
+                </div>
+            </div>
+    
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image3.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>3. Emergency Assistance Program</h1>
+                    <p>We provide critical support during emergencies, ensuring the 
+                        safety and well-being of affected communities through disaster relief, medical aid, and recovery resources.</p>
+                  
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section class="content-row">
+        <div class="containers">
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image4.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>4. Food Donation Programs</h1>
+                    <p>Many people in our community struggle with hunger. Our food donation drives ensure that everyone, especially the most vulnerable, has enough to eat. We work with local partners to distribute food and fight hunger.</p>
+                    
+                </div>
+            </div>
+    
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image5.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>5. Conducting the Eye Test Camp</h1>
+                    <p>Guide participants through registration, eye tests, and consultations efficiently. 
+                        Provide vision screenings, counseling, and distribute eyeglasses to those in need.</p>
+                </div>
+            </div>
+            
+    
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image6.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>6. Blood Donation Camp</h1>
+                    <p>The Utkal Foundation is organizing a blood donation camp to support healthcare facilities and save lives. 
+                        Blood donations are essential for treating accident victims, surgery patients, and 
+                        those battling life-threatening diseases.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section class="content-row">
+        <div class="containers">
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image7.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>7. Clean Water Access</h1>
+                    <p>We work tirelessly to provide clean and safe drinking water to underserved communities, 
+                        addressing a critical need for health and well-being. Through initiatives like water 
+                        purification systems and well construction, we reduce waterborne diseases and improve quality of life. </p>
+                    
+                </div>
+            </div>
+    
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image8.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>8. Anti-Smoking Campaigns</h1>
+                    <p>The Utkal Foundation's anti-smoking campaigns raise awareness about tobacco's dangers through workshops and support groups. We provide resources to help individuals quit smoking and reduce its harmful effects. Our goal is to promote healthier lifestyles and improve public health.</p>
+                </div>
+            </div>
+            
+    
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image9.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>9. Women Empowerment</h1>
+                    <p>Our initiative supports Self-Help Groups (SHGs) to empower women and marginalized communities through microloans, skill development, and market access. We aim to foster community, encourage entrepreneurship, and promote sustainable livelihoods.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section class="content-row">
+        <div class="containers">
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image10.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>10. Computer Classes for Students</h1>
+                    <p>We provide computer classes to equip students with vital digital skills, including basic operations and coding. Our hands-on training enhances academic performance and career opportunities, bridging the digital divide.</p>
+                    
+                </div>
+            </div>
+    
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image11.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>11. Child Empowerment</h1>
+                    <p>Our Child Empowerment initiative fosters children's potential through education, skill development, and mentorship. We provide access to 
+                        quality resources and support, helping children thrive and become active contributors to their communities.</p>
+                </div>
+            </div>
+            
+    
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="./WorkImg/image12.webp" alt="Project planning">
+                </div>
+                <div class="content">
+                    <h1>12. Tree Plantation Drive</h1>
+                    <p>Our Tree Plantation Drive aims to enhance environmental sustainability by increasing green cover in our communities. Through organized planting events, we engage volunteers and educate participants on the importance of trees in combating climate change and improving air quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+
+
+ <!-- Idea Delivery Section   2 -->
+ <section class="idea-delivery2">
+    <h2>Get Involved</h2>
+    <div class="contents">   
+        <p>We can’t do this alone. We need your help to continue our work. Whether you want to donate, volunteer, or join one of our programs, there are many ways you can make a difference.</p>
+        <p>Together, we can create a brighter and healthier future for everyone.</p>
+        <div class="button-group">
+            <a href="#get-involved" class="btn-primary">Join Us</a>
+            <a href="/src/pages/Members/members.html" class="btn-secondary">Donate</a>
+        </div>
+    </div>
+</section>
+    </div>
+
+    <div id="footer"></div>
+    <script src="/src/js/utils/footer.js"></script>
+    <script src="/src/js/nav.js"></script>
+</body>
+</html>

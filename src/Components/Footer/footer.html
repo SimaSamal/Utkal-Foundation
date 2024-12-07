@@ -1,0 +1,243 @@
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footerContainer">
+        <div class="footer-section">
+            <h2 class="logo">Utkal Foundation</h2>
+            <p class="description">
+                At Utkal Foundation, we are dedicated to uplifting marginalized communities through impactful initiatives.
+            </p>
+            <p class="contact">
+                <i class="fas fa-envelope"></i> info@utkalfoudation.in <br>
+                <i class="fas fa-phone"></i> +91 797-823-0576
+            </p>
+        </div>
+        <div class="footer-section">
+            <h3>QUICK LINKS</h3>
+            <ul>
+                <li><a href="/src/pages/AboutPage/about.html">About</a></li>
+                <li><a href="/src/pages/OurWork/work.html">Our Work</a></li>
+                <li><a href="/src/pages/Gallery-Page/gallery.html">Gallery</a></li>
+                <li><a href="/src/pages/Members/members.html">Members</a></li>
+                <li><a href="/src/pages/contactPage/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>CAMPAIGNS</h3>
+            <ul>
+                <li><a href="#">Child Cancer</a></li>
+                <li><a href="#">Differently Abled</a></li>
+                <li><a href="#">Clean Water</a></li>
+                <li><a href="#">Start Fundraising</a></li>
+                <li><a href="#">Give Education</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>"Empower lives with your support"</h3>
+            <p>Come Join Us Today!</p>
+            <a href="/src/pages/Members/members.html" class="donate-btn">Donate Now</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© Copyright 2023 by Utkal Foundation.com</p>
+        <p><a href="#">www.utkalfoundation.in</a></p>
+    </div>
+  <!-- Social Links -->
+  <div class="social-links">
+    <a href="https://www.facebook.com/profile.php?id=100075681608157&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com/UtkalFoundatio2?t=mjoRDYPl-ImKn_nk2wY26Q&s=08" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://wa.me/098531 72579" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/utkaltrust/?igsh=ZjU4ZGZkeDJvM3Rj" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+  
+  </footer>
+  <style>
+  .footer {
+    background-color: #000000;
+    padding: 30px 0;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 15px;
+    min-width: 250px;
+    
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.footer-section h2,
+.footer-section h3,
+.footer-section p {
+    color: white;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    .footer-section h3{
+        text-align: center; /* Center-align list items on mobile screens */
+       
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section h3 {
+        text-align: center; /* Center-align for very small screens */
+       
+    }
+}
+
+
+.footer-section p,
+.footer-section ul {
+    color: grey;
+    line-height: 1.7;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+     .footer-section ul li,.footer-section p {
+        text-align: center; /* Center-align list items on mobile screens */
+        margin-bottom: 8px; /* Adjust margin for tighter spacing on smaller screens */
+    }
+   
+}
+@media (max-width: 768px) {
+    .footer-section{
+        text-align: center;
+    }
+}
+.footer-section ul li a {
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: smaller;
+}
+
+.footer-section ul li a:hover {
+    color: #0f2da4;
+}
+
+.footer-section .contact i {
+    margin-right: 10px;
+}
+
+.donate-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #011152;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.donate-btn:hover {
+    background-color: #0f2da4;
+}
+
+/* Adding margin-top to push down Navigation, Campaigns, and We Work Together sections */
+.footer-section:nth-child(2), /* Navigation */
+.footer-section:nth-child(3), /* Campaigns */
+.footer-section:nth-child(4)  /* We Work Together for a Beautiful World */ {
+    margin-top: 30px; /* Adjust this value to control how much lower you want the sections */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0f1b24;
+}
+
+.footer-bottom p {
+    color: #94a3b8;
+}
+
+.footer-bottom a {
+    color: #0f2da4;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #0f2da4;
+}
+
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0f2da4;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #footerend{
+        text-align: center;
+    }
+    #footerend ,h3, p{
+        align-content: center;
+    }
+
+
+}
+@media (max-width: 425px) {
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+
+    /* Reset the margin on smaller screens for better layout */
+    .footer-section:nth-child(2),
+    .footer-section:nth-child(3),
+    .footer-section:nth-child(4) {
+        margin-top: 0;
+    }
+
+    .social-links a {
+        margin-right: 5px;
+    }
+}
+</style>

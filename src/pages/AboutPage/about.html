@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    
+    <header id="unique-navbar-header">
+        <nav id="unique-navbar" class="unique-navbar-container">
+          <div id="unique-logo-container" class="unique-logo">
+            <img src="/src/assets/images/Logo_Utkal.png" alt="logoImg" class="logoImg">
+            <h1 id="unique-navbar-logo">Utkal Foundation</h1>
+          </div>
+          <!-- Navigation Links -->
+          <ul id="unique-nav-links" class="unique-nav-list">
+            <li><a href="/index.html" class="unique-nav-link">Home</a></li>
+            <li><a href="/src/pages/AboutPage/about.html" class="unique-nav-link active">About</a></li>
+            <li><a href="/src/pages/OurWork/work.html" class="unique-nav-link">Work</a></li>
+            <li><a href="/src/pages/Gallery-Page/gallery.html" class="unique-nav-link">Gallery</a></li>
+            <li><a href="/src/pages/Members/members.html" class="unique-nav-link">Members</a></li>
+            <li><a href="/src/pages/contactPage/contact.html" class="unique-nav-link">Contact</a></li>
+            <li><a href="/src/pages/Members/members.html" id="unique-donate-button" class="unique-donate-btn">Donate</a></li>
+          </ul>
+          
+          <!-- Hamburger Button for Mobile -->
+          <button id="unique-hamburger" class="unique-hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+        
+        <!-- Popup Menu (hidden by default) -->
+        <div id="unique-popup-menu" class="unique-popup-menu hidden">
+        <div id="popup-header">
+                <h2>MENU</h2>
+          <!-- Close Button for Popup -->
+          <button id="unique-close-popup" class="unique-close-popup">
+            <i class="fas fa-times"></i> <!-- Cross (Close) Icon -->
+          </button>
+          </div>
+          <ul id="unique-popup-links" class="unique-popup-nav-links">
+            <li><a href="/index.html" class="unique-popup-link">Home</a></li>
+            <li><a href="/src/pages/AboutPage/about.html" class="unique-popup-link active">About</a></li>
+            <li><a href="/src/pages/OurWork/work.html" class="unique-popup-link">Work</a></li>
+            <li><a href="/src/pages/Gallery-Page/gallery.html" class="unique-popup-link">Gallery</a></li>
+            <li><a href="/src/pages/Members/members.html" class="unique-popup-link">Members</a></li>
+            <li><a href="/src/pages/contactPage/contact.html" class="unique-popup-link">Contact</a></li>
+            <li><a href="/payment page/Payment.html" id="unique-popup-donate-btn" class="unique-popup-donate-btn">Donate</a></li>
+          </ul>
+        </div>
+      </header>
+      
+    
+    <!-- Clickable area to close the popup menu -->
+    <div class="overlay hidden"></div>
+    <script>
+
+
+                // Get the current page URL
+const currentUrl = window.location.pathname;
+
+// Get all the navigation links
+const navLinks = document.querySelectorAll('.unique-nav-link');
+
+// Loop through each link and compare href with current URL
+navLinks.forEach(link => {
+  if (link.getAttribute('href') === currentUrl) {
+    link.classList.add('active');
+  }
+});
+
+
+
+        // Toggle popup menu on hamburger click
+document.getElementById("unique-hamburger").addEventListener("click", function() {
+  document.getElementById("unique-popup-menu").classList.toggle("show");
+});
+
+// Close popup when close button is clicked
+document.getElementById("unique-close-popup").addEventListener("click", function() {
+  document.getElementById("unique-popup-menu").classList.remove("show");
+});
+
+    </script>    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>About Us</h1>
+            
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Company Description Title -->
+        <h2 class="company-title">Our Organization Story</h2>
+        
+        <!-- Company Description Paragraph -->
+        <p class="company-paragraph">
+            Established in <span class="highlight">2021, Utkal Foundation, founded by Trilochan Das,</span> has been a leader in empowering 
+            marginalized communities through education, healthcare, and sustainable development initiatives. I founded Utkal Foundation driven by a profound commitment to creating positive change and responding 
+            to the pressing needs of our society. Witnessing the hardships faced by marginalized communities ignited my passion 
+            for social work and education, motivating me to take action. Through the foundation, I aim to empower individuals and communities by 
+            providing access to essential resources, education, and healthcare. Together with dedicated volunteers and supporters, we strive to break the cycle 
+            of poverty and uplift lives, fostering a sense of hope and opportunity for all.
+        </p>
+
+        <!-- Company Details Section     -->
+        <div class="company-details">
+            <!-- Founding Date -->
+            <div class="detail-item">
+                <h4>Year of Establishment: 2021</h4>
+                <p>Founded in <span class="highlight"> 2021, Utkal Foundation </span>is dedicated to uplifting marginalized communities through education, healthcare, and empowerment, working to create lasting change and improve lives.</p>
+                </div>
+
+            <!-- Headquarters -->
+            <div class="detail-item">
+                <h4>Location: Bhadrak, Odisha</h4>
+                <p>Based in <span class="highlight"> Bhadrak, Odisha, Utkal Foundation </span> serves local communities through education, healthcare, and empowerment programs, with a focus on reaching underserved areas.</p>
+            </div>
+
+            <!-- Team Size -->
+            <div class="detail-item">
+                <h4>Volunteer</h4>
+                <p>Our volunteers play a vital role in delivering <span class="highlight">Education, Healthcare, and Empowerment programs </span> to underserved communities. From organizing health camps to teaching children and supporting environmental initiatives, volunteers help us create lasting change on the ground. Every act of service brings us closer to building a more equitable society.</p>
+            </div>
+
+            <!-- Global Presence -->
+            <div class="detail-item">
+                <h4>Global Reach</h4>
+                <p><span class="highlight">Utkal Foundation </span> is committed to making a difference not just locally, but globally. Through our programs and partnerships, we extend support to marginalized communities worldwide, promoting education, healthcare, and sustainable development.</p>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <section class="about-company">
+        <div class="about-container">
+            <!-- Image -->
+            <div class="about-image">
+                <img src="/src/pages/AboutPage/AboutImg/about-3.jpg" alt="Company Image">
+            </div>
+            <!-- Text Description -->
+            <div class="about-text">
+                <h2>About Us</h2>
+                    <p>
+                      I founded the Utkal Foundation driven by a strong desire to create lasting, positive change in society and to address the
+                     critical needs of marginalized communities. My passion for social work and education grew from witnessing 
+                     the deep struggles and inequities faced by those without access to essential resources. This inspired me 
+                     to take action, not just to alleviate immediate challenges but to empower individuals and communities to
+                      build better, more sustainable futures. Through the Utkal Foundation, my goal is to create meaningful 
+                      impact by providing opportunities that transform lives and foster a more just and equitable world.
+                    </p>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Meet our founder-->
+<section class="about-founder">
+    <div class="about-founder-container">
+        <!-- Text Description -->
+        <div class="about-founder-text">
+            <h2>Meet our Founder</h2>
+            <p>
+                Trilochan Das, the visionary behind Utkal Foundation, established the organization out of a 
+                deep commitment to social change. With a passion for education, healthcare, and community empowerment, 
+                he has dedicated his life to uplifting the marginalized and ensuring that everyone has access to 
+                opportunities for growth and success. Witnessing the struggles of underserved communities firsthand, 
+                Trilochan was inspired to take meaningful action. His leadership continues to drive the foundation’s 
+                mission of creating sustainable, positive change and building a more equitable society for all.
+            </p>
+        </div>
+        <!-- Image -->
+        <div class="about-founder-image">
+            <img src="/src/pages/AboutPage/AboutImg/founder.webp" alt="Founder Image Image">
+        </div>
+    </div>
+</section>
+
+        <!-- Our Mission Section -->
+    <section class="our-mission">
+        <div class="mission-container">
+            <h2>Our Mission</h2>
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <div class="icon-wrapper">
+                        <img src="/src/pages/AboutPage/AboutImg/books.png" alt="Mission Icon 1" class="mission-icon">
+                    </div>
+                    <div class="mission-text">
+                        <h3>Education Empowerment</h3>
+                        <p>
+                            We aim to provide access to quality education for all children, fostering lifelong learning and personal growth.
+                        </p>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="icon-wrapper">
+                        <img src="/src/pages/AboutPage/AboutImg/care.png" alt="Mission Icon 2" class="mission-icon">
+                    </div>
+                    <div class="mission-text">
+                        <h3>Healthcare Accessibility</h3>
+                        <p>
+                            Our mission is to ensure that underserved communities receive essential healthcare services and awareness programs.
+                        </p>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="icon-wrapper">
+                        <img src="/src/pages/AboutPage/AboutImg/environmental-protection.png" alt="Mission Icon 3" class="mission-icon">
+                    </div>
+                    <div class="mission-text">
+                        <h3>Environmental Sustainability</h3>
+                        <p>
+                            We are committed to protecting the environment by promoting eco-friendly practices and conservation efforts.
+                        </p>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="icon-wrapper">
+                        <img src="/src/pages/AboutPage/AboutImg/global-warming.png" alt="Mission Icon 4" class="mission-icon">
+                    </div>
+                    <div class="mission-text">
+                        <h3>Disaster Relief Support</h3>
+                        <p>
+                            Our goal is to provide immediate assistance and resources to communities affected by natural disasters.
+                        </p>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="icon-wrapper">
+                        <img src="/src/pages/AboutPage/AboutImg/environmental.png" alt="Mission Icon 5" class="mission-icon">
+                    </div>
+                    <div class="mission-text">
+                        <h3>Environmental Responsibility</h3>
+                        <p>
+                            We are committed to promoting sustainable and environmentally-friendly practices.
+                        </p>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="icon-wrapper">
+                        <img src="/src/pages/AboutPage/AboutImg/diversity.png" alt="Mission Icon 6" class="mission-icon">
+                    </div>
+                    <div class="mission-text">
+                        <h3>Cultural Preservation</h3>
+                        <p>
+                            We aim to support and promote local culture and traditions, ensuring that community heritage is preserved for future generations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+ <section id="blog" class="blog-section">
+    <div class="container">
+        <h2>Our Achivements</h2>
+        <div class="blog-posts">
+            <!-- Blog Post 1 -->
+            <article class="post">
+                <img src="/src/pages/AboutPage/Image/achive-1.jpg" alt="Blog Image 1">
+                <div class="post-content">
+                    <h3>Seva Samman 2024</h3>
+                    <p>Join us in celebrating the 3rd Foundation Day of Seva Samman on 12th May 2024 at Shatabdi Bhawan, Cuttack.</p>
+                    <i> 3rd Foundation Day Celebration</i>
+                  <!--  <a href="#" class="read-more">All Blogs</a> -->
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="post">
+                <img src="/src/pages/AboutPage/Image/achive-2.jpeg" alt="Blog Image 2">
+                <div class="post-content">
+                    <h3>Sradha Sakti Seba Sanman</h3>
+                    <p>The Sradha Sakti Seba Sanman (Janmangal) JM Seba Sanman 2023 award is a testament to the Utkal Foundation's dedicated service and impactful work in the community. </p>
+                   <!--  <a href="#" class="read-more">All Blogs</a> -->
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="post">
+                <img src="/src/pages/AboutPage/Image/achive-3.jpeg" alt="Blog Image 3">
+                <div class="post-content">
+                    <h3>Sambhaba Charitable Trust</h3>
+                    <p>We are honored to receive the certificate of appreciation from Sambhaba Charitable Trust in recognition of our service and dedication.</p>
+                   <!--  <a href="#" class="read-more">All Blogs</a> -->
+                </div>
+            </article>
+            <!-- Blog Post 7 -->
+            <article class="post">
+                <img src="/src/pages/AboutPage/Image/achive-7.jpg" alt="Blog Image 3">
+                <div class="post-content">
+                    <h3>Kalia Seva Samman 2022</h3>
+                    <p>We are honored to receive the Kalia Seva Samman 2022 and certificate of appreciation from the Kalia Seva Foundation in recognition of our service and dedication.</p>
+                    <!--  <a href="#" class="read-more">All Blogs</a> -->
+                </div>
+            </article>
+            <!-- Blog Post 8 -->
+            <article class="post">
+                <img src="/src/pages/AboutPage/Image/achive-8.jpg" alt="Blog Image 3">
+                <div class="post-content">
+                    <h3>Seva Samman by The Little Angel Social Service Organization</h3>
+                    <p>We are deeply honored to receive the Seva Samman from The Little Angel Social Service Organization in recognition of our dedication to community service and positive impact on society.</p>
+                    <i>Dand Sundarpura, Kodandapur, Jajpur</i>
+                    <!--  <a href="#" class="read-more">All Blogs</a> -->
+                </div>
+            </article>
+            <!-- Blog Post 9 -->
+            <article class="post">
+                <img src="/src/pages/AboutPage/Image/achive-9.jpeg" alt="Blog Image 3">
+                <div class="post-content">
+                    <h3>Utkal Gaurav Seva Samman 2023</h3>
+                    <p>We are honored to receive the prestigious Utkal Gaurav Seva Samman 2023, acknowledging our dedicated service to the community. This recognition inspires us to continue our mission with pride and commitment.</p>
+                   <!--  <a href="#" class="read-more">All Blogs</a> -->
+                </div>
+            </article>
+            <!-- Blog Post 10 -->
+            <article class="post">
+                <img src="/src/pages/AboutPage/Image/achive-10.jpg" alt="Blog Image 3">
+                <div class="post-content">
+                    <h3>6th Annual Festival 2022</h3>
+                    <p>We are deeply honored to be awarded the State-Level Talent Award by the Adishakti Youth Council. This recognition inspires us to continue our commitment to excellence and community service.</p>
+                    <i>Location: Alarpur, Nakhara, Choudwar, Cuttack</i>
+                    <!--  <a href="#" class="read-more">All Blogs</a> -->
+                </div>
+            </article>
+            <!-- Blog Post 11 -->
+            <article class="post">
+                <img src="/src/pages/AboutPage/Image/achive-11.jpg" alt="Blog Image 3">
+                <div class="post-content">
+                    <h3>Maha Corona Yoddha Samman</h3>
+                    <p>We are proud to announce that we have been honored with the Maha Corona Yoddha Samman from Gaudapattana, Chhatia, Mahanga, and Cuttack in recognition of our significant contributions to combating the COVID-19 pandemic.</p>
+                    <i>Date: March 12, 2021</i>
+                 <!--  <a href="#" class="read-more">All Blogs</a> -->
+                </div>
+            </article>
+            <!-- Blog Post 12 -->
+            <article class="post">
+                <img src="/src/pages/AboutPage/Image/achive-12.jpg" alt="Blog Image 3">
+                <div class="post-content">
+                    <h3>Maa Mangala Utkarsha Seva Samman 2021</h3>
+                    <p>Recognizing outstanding contributions to community service and excellence in humanitarian efforts.</p>
+                <!--  <a href="#" class="read-more">All Blogs</a> -->
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+    <div id="footer"></div>
+    <script src="script.js"></script>
+    <script src="/src/js/utils/footer.js"></script>
+    <script src="/src/js/nav.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1624 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0 1.5rem 0 1.5rem;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+  }
+
+    body, html {
+    height: 100%;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #011152;
+    
+}
+/* Unique Navbar Styles */
+#unique-navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Fixed height */
+  background-color: #f5f6fa;
+  z-index: 1000; /* Ensure the navbar stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#unique-navbar {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+#unique-logo-container {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #011152;
+  display: flex;
+}
+.logoImg{
+  width: 110px;
+  height: 80px;
+
+}
+#unique-navbar-logo {
+  font-size: 1.5rem; /* Fixed font size */
+  width: 200px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  line-height: 50px; /* Vertically center the text */
+  text-align: center; /* Center the text horizontally */
+  margin-left: -20px;
+  margin-top: 20px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflow if the text exceeds the container size */
+  color: #011152; /* Text color */
+}
+
+#unique-nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0px;
+}
+
+.unique-nav-link {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #011152;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+#unique-donate-button {
+  background-color: #011152;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 20px;
+  margin-top: 20px;
+  
+}
+#unique-donate-button:hover{
+  background-color:#0056b3;  
+  color: white;
+}
+
+
+
+/* Hamburger Button for Mobile */
+#unique-hamburger {
+  display: none; /* Hidden on larger screens */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  
+}
+
+/* Popup Menu for Mobile */
+#unique-popup-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh; /* Full viewport height */
+  width: 75%; /* Width of the popup */
+  background-color: #ffffff; /* Clean white background */
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px; /* Added top padding for better spacing */
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.15); /* Slight shadow for depth */
+  z-index: 999; /* Keep on top */
+  transform: translateX(100%); /* Initially off-screen */
+  transition: transform 0.3s ease-in-out; /* Smooth slide-in effect */
+}
+
+#unique-popup-menu.show {
+  transform: translateX(0); /* Slide in */
+}
+#popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#popup-header h2 {
+  color: #011152; /* Dark blue for consistency */
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4CAF50;
+}
+
+#unique-close-popup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #011152; /* Dark blue color for contrast */
+  cursor: pointer;
+}
+
+.unique-popup-nav-links {
+  list-style: none;
+  padding-top: 5px;
+  margin-top: -10px; /* Space below the close button */
+  width: 100%;
+  
+}
+
+.unique-popup-link {
+  color: #011152; /* Dark blue color */
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 0;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #f0f0f5; /* Subtle border between links */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover transitions */
+}
+
+.unique-popup-link:hover {
+  background-color: rgba(1, 17, 82, 0.1); /* Light blue on hover */
+  color: #011152; /* Maintain dark blue text */
+  padding-left: 10px; /* Slide-in effect for text */
+}
+
+.unique-popup-link.active {
+  background-color: #011152; /* Highlight active menu item */
+  color: white; /* White text for contrast */
+  padding-left: 10px;
+  border-radius: 4px; /* Rounded for better design */
+}
+
+.unique-popup-donate-btn {
+  background-color: #011152;
+  color: white;
+  padding: 10px 20px; /* Reduced padding for smaller screens */
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-align:center;
+  width: 100%; /* Full width button */
+  display: inline-block;
+}
+
+/* Large screens (laptops/desktops) */
+@media (min-width: 1024px) {
+  .unique-popup-donate-btn {
+    padding: 10px 50px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .unique-popup-donate-btn {
+    padding: 10px 40px;
+    font-size: 1.4rem;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 767px) {
+  .unique-popup-donate-btn {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+  }
+}
+
+.unique-popup-donate-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Close button hover effect */
+#unique-close-popup:hover {
+  color: #0056b3; /* Lighter blue on hover */
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 220px) {
+  #unique-popup-menu {
+    width: 100%; /* Full screen for smaller devices */
+  }
+
+  .unique-popup-link {
+    font-size: 1.2rem; /* Smaller text size for mobile */
+    padding: 12px 0;
+  }
+
+  .unique-popup-donate-btn {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+}
+
+
+/* Hover Effect for Desktop Menu */
+.unique-nav-link:hover {
+  background-color: #011152; /* Blue background */
+  color: white; /* White text */
+  border: 2px solid #011152; /* Blue border */
+  border-radius: 5px; /* Optional: round the border slightly */
+  padding: 5px 10px; /* Adjust padding to account for border */
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+}
+
+/* Focus Effect for Clicked State */
+.unique-nav-link:focus {
+  background-color: #011152; /* Blue background */
+  color: white; /* White text */
+  border: 2px solid #011152; /* Blue border */
+  border-radius: 5px; /* Optional: round the border slightly */
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+}
+
+/* Hover Effect for Popup Menu */
+.unique-popup-link:hover {
+  background-color: #011152; /* Blue background */
+  color: white; /* White text */
+  border: 2px solid #011152; /* Blue border */
+  border-radius: 5px; /* Optional: round the border slightly */
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+}
+
+/* Focus Effect for Popup Clicked State */
+.unique-popup-link:focus {
+  background-color: #011152; /* Blue background */
+  color: white; /* White text */
+  border: 2px solid #011152; /* Blue border */
+  border-radius: 5px; /* Optional: round the border slightly */
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+}
+
+/* Active Menu Item Style */
+.unique-nav-link.active {
+  background-color: #011152; /* Blue background */
+  color: white; /* White text */
+  border: 2px solid #011152; /* Blue border */
+  border-radius: 5px; /* Optional: round the border */
+  padding: 5px 10px; /* Adjust padding to account for border */
+}
+
+/* Optional: to maintain hover and focus styles */
+.unique-nav-link.active:hover{
+  background-color: #011152;
+  color: white;
+}
+
+/* Optional: hover/focus for other non-active links */
+.unique-nav-link:hover{
+  background-color: rgba(1, 17, 82, 0.1);
+  color: #011152;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #unique-hamburger {
+    display: block;
+  }
+
+  #unique-nav-links {
+    display: none; /* Hide regular nav links on mobile */
+  }
+}
+@media (max-width: 425px) {
+  .logoImg{
+    width: 90px;
+    height: 65px;
+    margin-left: -10px;
+    margin-top: 3px;
+  
+  }
+  #unique-navbar-logo {
+    font-size: 1.2rem;
+    margin-left: -40px;
+    margin-top: 24px;
+
+  }
+}
+
+
+
+/* Hero Section */
+/* Slider Section */
+.slider-section {
+  position: relative;
+  margin-top: 80px;
+  height: 80vh; /* Full-screen height */
+  background-color: #111; /* Dark background */
+  overflow: hidden; /* Ensure no overflow */
+}
+
+/* Slider Container */
+.slider-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Hide overflow to ensure no extra content is visible */
+}
+
+.slider {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider {
+  min-width: 100%;
+  height: 100%; /* Set to 100% to match container */
+  position: relative;
+}
+
+.slider img {
+  width:100%;
+  height: 100%; 
+  max-width: 2560px;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  object-position: center; /* Center the image within the container */
+}
+
+/* Content Overlay */
+.content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent, rgba(0, 0, 0, 0.7));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 70px;
+}
+
+.content-overlay h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: white;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.content-overlay p {
+  font-size: 1.2rem;
+  margin-top: 0px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.buttons-container {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.sliderbutton {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #082ba6; 
+  color: #111; /* Dark text */
+}
+
+.sliderbutton:hover {
+  background-color: #3d5ed7; 
+}
+
+.sliderbutton-outline {
+  padding: 12px 24px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+  border: 2px solid #0056b3;
+  color: #000000;
+}
+
+.sliderbutton-outline:hover {
+  background-color: #0056b3;
+  color: #111;
+}
+
+/* Carousel Controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #050045;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+#prevSlide {
+  left: 20px;
+}
+
+#nextSlide {
+  right: 20px;
+}
+
+.carousel-control:hover {
+  background-color: #0056b3; /* Darker yellow */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-overlay h1 {
+      font-size: 2rem;
+  }
+
+  .content-overlay p {
+      font-size: 1rem;
+  }
+
+  .sliderbutton, .sliderbutton-outline {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+  }
+
+  .buttons-container {
+      flex-direction: column;
+      gap: 16px;
+  }
+
+  #prevSlide, #nextSlide {
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-overlay h1 {
+      font-size: 1.5rem;
+  }
+
+  .content-overlay p {
+      font-size: 0.9rem;
+  }
+
+  .sliderbutton, .sliderbutton-outline {
+      padding: 8px 12px;
+      font-size: 0.8rem;
+  }
+
+  .buttons-container {
+      gap: 12px;
+  }
+}
+
+/* Button Styles */
+.sliderbutton {
+  background-color: #1ca900; /* Equivalent to bg-yellow-500 */
+  color: #ffffff; /* Equivalent to text-gray-900 */
+  padding: 10px 20px; /* Equivalent to py-2 px-6 */
+  border-radius: 30px; /* Equivalent to rounded-full */
+  font-weight: bold; /* Equivalent to font-bold */
+  text-decoration: none; /* Remove underline for links */
+  transition: background-color 0.3s ease; /* Equivalent to hover transition */
+  display: inline-block; /* Ensures block-level display */
+}
+
+.sliderbutton:hover {
+  background-color: #1db431; /* Equivalent to hover:bg-yellow-400 */
+  cursor: pointer;
+}
+
+/* Button container for consistent spacing */
+.buttons-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Optional: You can adjust button size on smaller screens */
+@media (max-width: 768px) {
+  .sliderbutton {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+  }
+}
+
+
+
+/*.hero {
+    background: url('/src/assets/images/child-807547_1280.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Hero Container - Left and Right Sides 
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 1.5rem;
+}
+
+
+.hero-left {
+    flex: 1;
+    max-width: 45%;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    padding: 10px 1.5rem 10px 1.5rem;
+}
+
+.hbtn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    align-content: center;
+}
+
+.primary {
+    background-color: #011152;
+    color: white;
+    margin-right: 20px;
+}
+
+.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.primary:hover {
+    background-color: #223376;
+}
+
+.secondary:hover {
+    background-color: white;
+    color: #011152;
+}
+
+// Button Styling 
+.donate-btn {
+    display: inline-block;
+    background-color: #011152;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}*/
+
+/* Foundation Section */
+.foundation-section {
+  background-color: #f7fafc; /* bg-gray-100 */
+  padding: 3rem 0; /* py-12 */
+}
+
+.content-1 {
+  max-width: 64rem; /* max-w-4xl */
+  margin: 0 auto; /* mx-auto */
+  padding: 0 1.5rem; /* px-6 */
+  text-align: center;
+}
+
+.foundation-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  color: #1d4ed8; /* text-blue-700 */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+/* Responsive font sizes */
+@media (min-width: 768px) {
+  .foundation-title {
+      font-size: 1.875rem; /* md:text-3xl */
+  }
+}
+
+@media (min-width: 1024px) {
+  .foundation-title {
+      font-size: 2.25rem; /* lg:text-4xl */
+  }
+}
+
+.foundation-subtitle {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.foundation-description {
+  font-size: 0.75rem; /* text-xs */
+  color: #4b5563; /* text-gray-700 */
+  line-height: 1.75; /* leading-relaxed */
+}
+
+/* Responsive font sizes for description */
+@media (min-width: 768px) {
+  .foundation-description {
+      font-size: 0.875rem; /* md:text-base */
+  }
+}
+
+@media (min-width: 1024px) {
+  .foundation-description {
+      font-size: 1rem; /* lg:text-base */
+  }
+}
+
+/* Section Styling */
+#mission-vision {
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+  max-width: 1280px;
+  padding: 40px 1rem; /* Reduced vertical padding for better height control */
+  margin: 0 auto; /* Centering the section */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#mission-vision h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px; /* Reduced bottom margin */
+  color: #96e6a1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mission-content {
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap;
+}
+
+/* Text Section Styling */
+.mission-text-section {
+  flex: 1 1 300px; /* Allow elements to grow and shrink */
+  margin: 10px; /* Reduced margin */
+  padding: 15px; /* Adjusted padding */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-text-section h3 {
+  font-size: 1.5rem; /* Adjusted for desktop */
+  color: #011152;
+  margin-bottom: 15px; /* Reduced bottom margin */
+}
+
+.mission-text-section p {
+  font-size: 1rem; /* Adjusted for desktop */
+  color: #424242;
+  line-height: 1.5; /* Reduced line height for better readability */
+}
+
+.mission-text-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.mission-image-section {
+  flex: 1 1 300px; /* Allow image section to grow and shrink */
+  margin: 10px;
+  position: relative;
+}
+
+.mission-image-section img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-image-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient Background Effect */
+#mission-vision::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: linear-gradient(135deg, #4949ff, #011152);
+  z-index: 0;
+  animation: rotateGradient 10s infinite linear;
+}
+
+/* Gradient Animation */
+@keyframes rotateGradient {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Ensure content is above background animation */
+.mission-content,
+h2 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-content {
+      flex-direction: column; /* Stack elements on small screens */
+      align-items: center;
+  }
+
+  .mission-text-section,
+  .mission-image-section {
+      width: 90%; /* Full width for smaller screens */
+      margin: 10px 0; /* Add margin between sections */
+  }
+
+  .mission-text-section {
+      padding: 10px; /* Reduce padding for mobile */
+      text-align: center; /* Center the text */
+  }
+
+  /* Responsive Font Sizes */
+  .mission-text-section h3 {
+      font-size: 1.4rem; /* Smaller font for mobile */
+  }
+
+  .mission-text-section p {
+      font-size: 0.9rem; /* Smaller font for mobile */
+      line-height: 1.4; /* Adjust line height for mobile */
+  }
+}
+
+
+
+
+
+/* Base Styles (for larger screens) */
+.certification-section {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #fff;
+  padding: 20px 1.5rem;
+  text-align: center;
+}
+
+.certifications {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+.certifications img {
+  height: 60px;
+  width: 150px;
+}
+
+/* Laptop Screen (Up to 1024px) */
+@media (max-width: 1024px) {
+  .certification-section {
+    max-width: 1024px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .certifications {
+    gap: 50px;
+  }
+
+  .certifications img {
+    height: 50px;
+    width: 120px;
+  }
+}
+
+/* Tablet Screen (Up to 768px) */
+@media (max-width: 768px) {
+  .certification-section {
+    max-width: 768px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .certifications {
+    gap: 40px;
+  }
+
+  .certifications img {
+    height: 40px;
+    width: 100px;
+  }
+}
+
+/* Mobile Screen (Up to 480px) */
+@media (max-width: 480px) {
+  .certification-section {
+    max-width: 480px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .certifications {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */
+    gap: 20px;
+    justify-items: center; /* Center items in each grid cell */
+  }
+
+  .certifications img {
+    height: 30px;
+    width: 80px;
+  }
+}
+
+
+/* General Section Styling */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Section Heading */
+.section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Content Wrapper */
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+/* Text Section Styling */
+.text-section {
+    max-width: 600px;
+    text-align: left;
+}
+
+.text-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #011152;
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Image Section Styling */
+.image-section {
+    max-width: 500px;
+    width: 100%;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-section {
+        text-align: center;
+    }
+}
+
+
+/* Our Work */
+#our-work {
+  background-color: rgb(237, 237, 237);
+}
+
+#our-work h2 {
+  color: #011152;
+}
+
+/* Our Work Container Styles */
+.work-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next row */
+  justify-content: space-between; /* Space items evenly */
+  gap: 15px; /* Adjusted space between items */
+  max-width: 1280px;
+  margin: 0 auto;
+  
+}
+
+/* Each Work Item Styles */
+.work-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure the image fits well within the fixed container */
+.work-item img {
+  width: 100%;
+  height: 200px; /* Fixed height for the image */
+  object-fit: cover; /* Cover ensures the image covers the area without distortion */
+  margin-bottom: 8px;
+}
+
+/* Title and paragraph styles */
+.work-item h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.work-item p {
+  font-size: 17px;
+  color: #666;
+  line-height: 1.6;
+  overflow: hidden; /* Ensure overflow is hidden */
+}
+
+/* Hover effects */
+.work-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 1440px) {
+  .work-item {
+    width: calc(33.33% - 10px); /* 3 items per row for 1440px and above */
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .work-item {
+    width: calc(33.33% - 10px); /* 3 items per row for 1024px to 1439px */
+  }
+}
+
+@media (max-width: 768px) {
+  .work-item {
+      width: calc(50% - 15px); /* 2 items per row for tablet screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .work-item {
+      width: 100%; /* 1 item per row for mobile screens */
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  color: #011152;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  z-index: 2;
+  position: relative;
+}
+
+
+/* Membership Section */
+.pricing-container {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #83a4d4, #b6fbff);
+  overflow: hidden; /* Keeps animated elements within the container */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Membership card */
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 25px;
+  width: 100%; /* Responsive width */
+  max-width: 300px; /* Maximum width */
+  height: auto; /* Allow flexible height */
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.icon-wrapper {
+  background-color: #b4cde9;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper img {
+  height: 60px;
+  width: 60px;
+}
+
+.plan {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 2.5rem;
+  margin: 15px 0;
+  color: rgb(245, 245, 17);
+}
+
+.feature {
+  margin: 0;
+  color: white;
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+  background-color: #069828;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+  margin-top: auto; /* Push button to bottom */
+}
+
+.btn:hover {
+  background-color: #11de41;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card {
+    max-width: 250px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+    margin: -20px;
+  }
+  
+  .card {
+    max-width: 80%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan {
+    font-size: 1.6rem;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .feature {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap');
+
+/* Reset and Box-Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Animated Waves */
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 150px;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg') repeat-x;
+  background-size: cover;
+  opacity: 0.5;
+  animation: waveAnimation 10s linear infinite;
+  z-index: 1;
+}
+
+@keyframes waveAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Moving Stars */
+.stars {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 5s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.2; }
+}
+
+/* Generate Stars with CSS */
+.stars::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  top: 10%;
+  left: 20%;
+  animation: twinkle 5s infinite;
+}
+
+.stars::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  top: 40%;
+  left: 70%;
+  animation: twinkle 6s infinite;
+}
+
+/* Floating Bubbles */
+@keyframes bubbleAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: bubbleAnimation 20s ease-in infinite;
+}
+
+.bubble:nth-child(1) {
+  left: 10%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 18s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(2) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-duration: 25s;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(3) {
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 30s;
+  animation-delay: 6s;
+}
+
+.bubble:nth-child(4) {
+  left: 75%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 22s;
+  animation-delay: 8s;
+}
+
+.bubble:nth-child(5) {
+  left: 90%;
+  width: 90px;
+  height: 90px;
+  animation-duration: 35s;
+  animation-delay: 10s;
+}
+
+.bubble:nth-child(6) {
+  left: 15%;
+  width: 70px;
+  height: 70px;
+  animation-duration: 28s;
+  animation-delay: 12s;
+}
+
+/* Heading */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(30px);
+}
+
+
+/* Card Variants with Gradient Backgrounds */
+.basic {
+  background: linear-gradient(135deg,  #4949ff, #011152);
+}
+
+.professional {
+  background: linear-gradient(135deg,  #4949ff, #011152);
+}
+
+.team {
+  background: linear-gradient(135deg,  #4949ff, #011152);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 100%;
+  }
+}
+
+/* Optional: Adding More Stars Dynamically */
+@media (min-width: 768px) {
+  .stars::before,
+  .stars::after,
+  .stars::nth-child(3),
+  .stars::nth-child(4) {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 5s infinite;
+  }
+
+  .stars::before {
+    top: 15%;
+    left: 30%;
+    animation-delay: 1s;
+  }
+
+  .stars::after {
+    top: 60%;
+    left: 80%;
+    animation-delay: 3s;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+/*Catalog slider*/
+/* Style for the container */
+.unique-download-container-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh; /* Ensures it takes up full screen height */
+  text-align: center;
+  background-color: #f8f9fa; /* Optional background for the section */
+  margin: 0;
+}
+
+/* Style for the button */
+.unique-download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff; /* Bootstrap primary blue color */
+  text-decoration: none;
+  border-radius: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.unique-download-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.unique-download-btn:active {
+  background-color: #003f7f; /* Even darker blue on active */
+  transform: translateY(0); /* Reset lift effect */
+}
+
+/*Catalog slider*/
+
+
+.unique-responsive{
+  max-width: 1280px;
+  background-color: #78a0cb;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/* Slider Section */
+.unique-slider-container {
+  background-color: #001934;
+  position: relative;
+  width: 60%;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.unique-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: calc(100% * 30); /* 30 slides */
+}
+
+.unique-slide {
+  
+  width: 100%;
+  flex: 1;
+}
+
+.unique-slide img {
+  width: 100%;
+  height: auto;
+  
+}
+
+.unique-prev, .unique-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.unique-prev {
+  left: 10px;
+}
+
+.unique-next {
+  right: 10px;
+}
+
+.unique-prev:hover, .unique-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* PDF Download Button */
+.unique-download-container {
+  position: absolute;
+  bottom: 60px; /* Positioned slightly below the slider */
+  right: 10%;
+  transform: translateX(-50%); /* Horizontally center the button */
+  text-align: center;
+  
+}
+
+.unique-download-btn {
+  padding: 15px 30px;
+  background-color: #001c3a;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  animation: float 3s ease-in-out infinite; /* Floating animation applied */
+  z-index: 1;
+}
+
+.unique-download-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Keyframes for the Floating Animation */
+@keyframes float {
+  0% {
+      transform: translateY(0); /* Starting position */
+  }
+  50% {
+      transform: translateY(-10px); /* Float up by 10px */
+  }
+  100% {
+      transform: translateY(0); /* Back to the original position */
+  }
+}
