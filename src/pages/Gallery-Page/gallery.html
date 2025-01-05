@@ -25,6 +25,57 @@
             <li><a href="/src/pages/contactPage/contact.html" class="unique-nav-link">Contact</a></li>
             <li><a href="/src/pages/Members/members.html" id="unique-donate-button" class="unique-donate-btn">Donate</a></li>
           </ul>
+
+          <!-- Popup Container -->
+        <div id="donatePopup" class="popup" style="display: none;">
+          <div class="popup-content">
+              <span class="close-btn" id="closePopup">&times;</span>
+              <h2>Support Our Cause</h2>
+              <p>Your contributions help us make a difference!</p>
+      
+              <!-- Payment Method Tabs -->
+              <div class="tab-container">
+                  <button class="tab active" data-target="qr-code">QR Code</button>
+                  <button class="tab" data-target="bank-details">Bank Details</button>
+                  <button class="tab" data-target="online-payment">Online Payment</button>
+              </div>
+      
+              <!-- Tab Content -->
+              <div class="tab-content active" id="qr-code">
+                  <h3>Scan QR Code</h3>
+                  <img src="qrcode.png" alt="QR Code" class="qr-code">
+                  <p>Use any UPI app to scan the QR code and donate.</p>
+              </div>
+      
+              <div class="tab-content" id="bank-details">
+                  <h3>Bank Account Details</h3>
+                  <p><strong>Account Number:</strong> 09940110152812</p>
+                  <p><strong>IFSC Code:</strong> UCBA0000994</p>
+                  <p><strong>Bank Name:</strong> UCO BANK OF INDIA </p>
+              </div>
+      
+              <div class="tab-content" id="online-payment">
+                  <h3>Online Payment</h3>
+                  <form id="paymentForm">
+                      <label for="amount">Enter Amount (₹):</label>
+                      <input type="number" id="amount" name="amount" placeholder="e.g., 500" required>
+                      
+                      <label for="paymentMethod">Choose Payment Method:</label>
+                      <select id="paymentMethod" name="paymentMethod" required>
+                          <option value="creditCard">Credit Card</option>
+                          <option value="debitCard">Debit Card</option>
+                          <option value="netBanking">Net Banking</option>
+                          <option value="wallet">Wallet</option>
+                      </select>
+                      
+                      <button type="submit" class="pay-now">Pay Now</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <!-- Popup Container end -->
+
+
           <!-- Hamburger Button for Mobile -->
           <button id="unique-hamburger" class="unique-hamburger">
             <i class="fas fa-bars"></i>
@@ -131,39 +182,265 @@ document.getElementById("unique-close-popup").addEventListener("click", function
 <!--OurAword-->
         <h1>Gallery</h1>
         <div class="gallery">
-            <img src="./Gallery-Image/1.webp" alt="Gallery Image 1">
-            <img src="./Gallery-Image/2.webp" alt="Gallery Image 2">
-            <img src="./Gallery-Image/3.webp" alt="Gallery Image 3">
-            <img src="./Gallery-Image/4.webp" alt="Gallery Image 4">
-            <img src="./Gallery-Image/5.webp" alt="Gallery Image 5">
-            <img src="./Gallery-Image/6.webp" alt="Gallery Image 6">
-            <img src="./Gallery-Image/7.webp" alt="Gallery Image 7">
-            <img src="./Gallery-Image/8.webp" alt="Gallery Image 8">
-            <img src="./Gallery-Image/9.webp" alt="Gallery Image 9">
-            <img src="./Gallery-Image/10.webp" alt="Gallery Image 10">       
-            <img src="./Gallery-Image/11.webp" alt="Gallery Image 11">
-            <img src="./Gallery-Image/12.webp" alt="Gallery Image 12">
-            <img src="./Gallery-Image/13.webp" alt="Gallery Image 13">
-            <img src="./Gallery-Image/14.webp" alt="Gallery Image 14">
-            <img src="./Gallery-Image/15.webp" alt="Gallery Image 15">
-            <img src="./Gallery-Image/16.webp" alt="Gallery Image 16">
-            <img src="./Gallery-Image/17.webp" alt="Gallery Image 17">
-            <img src="./Gallery-Image/18.webp" alt="Gallery Image 18">
-            <img src="./Gallery-Image/19.webp" alt="Gallery Image 19">
-            <img src="./Gallery-Image/20.webp" alt="Gallery Image 20">
-            <img src="./Gallery-Image/21.webp" alt="Gallery Image 21">
-            <img src="./Gallery-Image/22.webp" alt="Gallery Image 22">
-            <img src="./Gallery-Image/23.webp" alt="Gallery Image 23">
-            <img src="./Gallery-Image/24.webp" alt="Gallery Image 24">
-            <img src="./Gallery-Image/25.webp" alt="Gallery Image 25">
-            <img src="./Gallery-Image/26.webp" alt="Gallery Image 26">
-            <img src="./Gallery-Image/27.webp" alt="Gallery Image 27">
-            <img src="./Gallery-Image/28.webp" alt="Gallery Image 28">
-            <img src="./Gallery-Image/29.webp" alt="Gallery Image 29">
-            <img src="./Gallery-Image/30.webp" alt="Gallery Image 30">
-            <img src="./Gallery-Image/31.webp" alt="Gallery Image 31">
-            <img src="./Gallery-Image/32.webp" alt="Gallery Image 32">
+          <a href="#" onclick="openLightbox(0)">
+            <img src="Gallery-Image/1.webp" alt="Gallery Image 1">
+          </a>
+          <a href="#" onclick="openLightbox(1)">
+            <img src="Gallery-Image/2.webp" alt="Gallery Image 2">
+          </a>
+          <a href="#" onclick="openLightbox(2)">
+            <img src="Gallery-Image/3.webp" alt="Gallery Image 3">
+          </a>
+          <a href="#" onclick="openLightbox(3)">
+            <img src="Gallery-Image/4.webp" alt="Gallery Image 4">
+          </a>
+          <a href="#" onclick="openLightbox(4)">
+            <img src="Gallery-Image/5.webp" alt="Gallery Image 5">
+          </a>
+          <a href="#" onclick="openLightbox(5)">
+            <img src="Gallery-Image/6.webp" alt="Gallery Image 6">
+          </a>
+          <a href="#" onclick="openLightbox(6)">
+            <img src="Gallery-Image/7.webp" alt="Gallery Image 7">
+          </a>
+          <a href="#" onclick="openLightbox(7)">
+            <img src="Gallery-Image/8.webp" alt="Gallery Image 8">
+          </a>
+          <a href="#" onclick="openLightbox(8)">
+            <img src="Gallery-Image/9.webp" alt="Gallery Image 9">
+          </a>
+          <a href="#" onclick="openLightbox(9)">
+            <img src="Gallery-Image/10.webp" alt="Gallery Image 10">
+          </a>
+          <a href="#" onclick="openLightbox(10)">
+            <img src="Gallery-Image/11.webp" alt="Gallery Image 11">
+          </a>
+          <a href="#" onclick="openLightbox(11)">
+            <img src="Gallery-Image/12.webp" alt="Gallery Image 12">
+          </a>
+          <a href="#" onclick="openLightbox(12)">
+            <img src="Gallery-Image/13.webp" alt="Gallery Image 13">
+          </a>
+          <a href="#" onclick="openLightbox(13)">
+            <img src="Gallery-Image/14.webp" alt="Gallery Image 14">
+          </a>
+          <a href="#" onclick="openLightbox(14)">
+            <img src="Gallery-Image/15.webp" alt="Gallery Image 15">
+          </a>
+          <a href="#" onclick="openLightbox(15)">
+            <img src="Gallery-Image/16.webp" alt="Gallery Image 16">
+          </a>
+          <a href="#" onclick="openLightbox(16)">
+            <img src="Gallery-Image/17.webp" alt="Gallery Image 17">
+          </a>
+          <a href="#" onclick="openLightbox(17)">
+            <img src="Gallery-Image/18.webp" alt="Gallery Image 18">
+          </a>
+          <a href="#" onclick="openLightbox(18)">
+            <img src="Gallery-Image/19.webp" alt="Gallery Image 19">
+          </a>
+          <a href="#" onclick="openLightbox(19)">
+            <img src="Gallery-Image/20.webp" alt="Gallery Image 20">
+          </a>
+          <a href="#" onclick="openLightbox(20)">
+            <img src="Gallery-Image/21.webp" alt="Gallery Image 21">
+          </a>
+          <a href="#" onclick="openLightbox(21)">
+            <img src="Gallery-Image/22.webp" alt="Gallery Image 22">
+          </a>
+          <a href="#" onclick="openLightbox(22)">
+            <img src="Gallery-Image/23.webp" alt="Gallery Image 23">
+          </a>
+          <a href="#" onclick="openLightbox(23)">
+            <img src="Gallery-Image/24.webp" alt="Gallery Image 24">
+          </a>
+          <a href="#" onclick="openLightbox(24)">
+            <img src="Gallery-Image/25.webp" alt="Gallery Image 25">
+          </a>
+          <a href="#" onclick="openLightbox(25)">
+            <img src="Gallery-Image/26.webp" alt="Gallery Image 26">
+          </a>
+          <a href="#" onclick="openLightbox(26)">
+            <img src="Gallery-Image/27.webp" alt="Gallery Image 27">
+          </a>
+          <a href="#" onclick="openLightbox(27)">
+            <img src="Gallery-Image/28.webp" alt="Gallery Image 28">
+          </a>
+          <a href="#" onclick="openLightbox(28)">
+            <img src="Gallery-Image/29.webp" alt="Gallery Image 29">
+          </a>
+          <a href="#" onclick="openLightbox(29)">
+            <img src="Gallery-Image/30.webp" alt="Gallery Image 30">
+          </a>
+          <a href="#" onclick="openLightbox(30)">
+            <img src="Gallery-Image/31.webp" alt="Gallery Image 31">
+          </a>
+          <a href="#" onclick="openLightbox(31)">
+            <img src="Gallery-Image/32.webp" alt="Gallery Image 32">
+          </a>
         </div>
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <button class="arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+  <div class="lightbox-content">
+    <img id="lightbox-image" src="" alt="Full Image">
+  </div>
+  <button class="arrow next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<style>
+  /* Gallery styles */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+  }
+
+  .gallery a {
+    display: block;
+    overflow: hidden;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Lightbox styles */
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .lightbox-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+  }
+
+  .lightbox img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateY(-50%);
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+</style>
+
+<script>
+  // Store the index of the images
+  const images = [
+    'Gallery-Image/1.webp',
+    'Gallery-Image/2.webp',
+    'Gallery-Image/3.webp',
+    'Gallery-Image/4.webp',
+    'Gallery-Image/5.webp',
+    'Gallery-Image/6.webp',
+    'Gallery-Image/7.webp',
+    'Gallery-Image/8.webp',
+    'Gallery-Image/9.webp',
+    'Gallery-Image/10.webp',
+    'Gallery-Image/11.webp',
+    'Gallery-Image/12.webp',
+    'Gallery-Image/13.webp',
+    'Gallery-Image/14.webp',
+    'Gallery-Image/15.webp',
+    'Gallery-Image/16.webp',
+    'Gallery-Image/17.webp',
+    'Gallery-Image/18.webp',
+    'Gallery-Image/19.webp',
+    'Gallery-Image/20.webp',
+    'Gallery-Image/21.webp',
+    'Gallery-Image/22.webp',
+    'Gallery-Image/23.webp',
+    'Gallery-Image/24.webp',
+    'Gallery-Image/25.webp',
+    'Gallery-Image/26.webp',
+    'Gallery-Image/27.webp',
+    'Gallery-Image/28.webp',
+    'Gallery-Image/29.webp',
+    'Gallery-Image/30.webp',
+    'Gallery-Image/31.webp',
+    'Gallery-Image/32.webp',
+
+
+    // Add more images here
+  ];
+
+  let currentIndex = 0;
+
+  // Function to open the lightbox and display the full image
+  function openLightbox(index) {
+    currentIndex = index;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    lightboxImage.src = images[currentIndex];
+    lightbox.style.display = 'flex';  // Show lightbox
+  }
+
+  // Function to close the lightbox
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';  // Hide lightbox
+  }
+
+  // Function to navigate images in the lightbox
+  function moveSlide(step) {
+    currentIndex += step;
+
+    if (currentIndex >= images.length) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = images.length - 1;
+
+    const lightboxImage = document.getElementById('lightbox-image');
+    lightboxImage.src = images[currentIndex];
+  }
+
+  // Close the lightbox when clicking outside the image
+  document.getElementById('lightbox').addEventListener('click', (event) => {
+    if (event.target === document.getElementById('lightbox')) {
+      closeLightbox();
+    }
+  });
+</script>        
+      
     </section>
 
     <!-- Footer Section -->
@@ -218,5 +495,46 @@ document.getElementById("unique-close-popup").addEventListener("click", function
 </footer>
 
     <script src="/src/js/nav.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const donateButton = document.getElementById("unique-donate-button");
+          const donatePopup = document.getElementById("donatePopup");
+          const closePopup = document.getElementById("closePopup");
+          const tabs = document.querySelectorAll(".tab");
+          const tabContents = document.querySelectorAll(".tab-content");
+      
+          // Show popup when "Donate" button is clicked
+          donateButton.addEventListener("click", (event) => {
+              event.preventDefault(); // Prevent default navigation
+              donatePopup.style.display = "block";
+          });
+      
+          // Close the popup when the close button is clicked
+          closePopup.addEventListener("click", () => {
+              donatePopup.style.display = "none";
+          });
+      
+          // Tab functionality
+          tabs.forEach((tab) => {
+              tab.addEventListener("click", () => {
+                  // Remove active classes
+                  tabs.forEach((t) => t.classList.remove("active"));
+                  tabContents.forEach((tc) => tc.classList.remove("active"));
+      
+                  // Add active classes
+                  tab.classList.add("active");
+                  document.getElementById(tab.dataset.target).classList.add("active");
+              });
+          });
+      
+          // Payment form submission
+          document.getElementById("paymentForm").addEventListener("submit", (event) => {
+              event.preventDefault();
+              alert("Thank you for your donation!");
+              donatePopup.style.display = "none";
+          });
+      });
+      </script>
+
 </body>
 </html>

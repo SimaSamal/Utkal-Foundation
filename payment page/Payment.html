@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Popup Container -->
+    <div id="donatePopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <h2>Support Our Cause</h2>
+            <p>Your contributions help us make a difference!</p>
+
+            <!-- Payment Method Tabs -->
+            <div class="tab-container">
+                <button class="tab active" data-target="qr-code">QR Code</button>
+                <button class="tab" data-target="bank-details">Bank Details</button>
+                <button class="tab" data-target="online-payment">Online Payment</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content active" id="qr-code">
+                <h3>Scan QR Code</h3>
+                <img src="qrcode.png" alt="QR Code" class="qr-code">
+                <p>Use any UPI app to scan the QR code and donate.</p>
+            </div>
+
+            <div class="tab-content" id="bank-details">
+                <h3>Bank Account Details</h3>
+                <p><strong>Account Number:</strong> 1234567890</p>
+                <p><strong>IFSC Code:</strong> ABCD0123456</p>
+                <p><strong>Bank Name:</strong> XYZ Bank</p>
+            </div>
+
+            <div class="tab-content" id="online-payment">
+                <h3>Online Payment</h3>
+                <form id="paymentForm">
+                    <label for="amount">Enter Amount (₹):</label>
+                    <input type="number" id="amount" name="amount" placeholder="e.g., 500" required>
+                    
+                    <label for="paymentMethod">Choose Payment Method:</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="creditCard">Credit Card</option>
+                        <option value="debitCard">Debit Card</option>
+                        <option value="netBanking">Net Banking</option>
+                        <option value="wallet">Wallet</option>
+                    </select>
+                    
+                    <button type="submit" class="pay-now">Pay Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

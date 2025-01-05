@@ -25,8 +25,56 @@
             <li><a href="/src/pages/Gallery-Page/gallery.html" class="unique-nav-link">Gallery</a></li>
             <li><a href="/src/pages/Members/members.html" class="unique-nav-link">Members</a></li>
             <li><a href="/src/pages/contactPage/contact.html" class="unique-nav-link">Contact</a></li>
-            <li><a href="/src/pages/Members/members.html" id="unique-donate-button" class="unique-donate-btn">Donate</a></li>
+            <li><a href="#" id="unique-donate-button">Donate</a></li>
           </ul>
+          <!-- Popup Container -->
+        <div id="donatePopup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <span class="close-btn" id="closePopup">&times;</span>
+                <h2>Support Our Cause</h2>
+                <p>Your contributions help us make a difference!</p>
+        
+                <!-- Payment Method Tabs -->
+                <div class="tab-container">
+                    <button class="tab active" data-target="qr-code">QR Code</button>
+                    <button class="tab" data-target="bank-details">Bank Details</button>
+                    <button class="tab" data-target="online-payment">Online Payment</button>
+                </div>
+        
+                <!-- Tab Content -->
+                <div class="tab-content active" id="qr-code">
+                    <h3>Scan QR Code</h3>
+                    <img src="qrcode.png" alt="QR Code" class="qr-code">
+                    <p>Use any UPI app to scan the QR code and donate.</p>
+                </div>
+        
+                <div class="tab-content" id="bank-details">
+                    <h3>Bank Account Details</h3>
+                    <p><strong>Account Number:</strong> 09940110152812</p>
+                    <p><strong>IFSC Code:</strong> UCBA0000994</p>
+                    <p><strong>Bank Name:</strong> UCO BANK OF INDIA </p>
+                </div>
+        
+                <div class="tab-content" id="online-payment">
+                    <h3>Online Payment</h3>
+                    <form id="paymentForm">
+                        <label for="amount">Enter Amount (₹):</label>
+                        <input type="number" id="amount" name="amount" placeholder="e.g., 500" required>
+                        
+                        <label for="paymentMethod">Choose Payment Method:</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="creditCard">Credit Card</option>
+                            <option value="debitCard">Debit Card</option>
+                            <option value="netBanking">Net Banking</option>
+                            <option value="wallet">Wallet</option>
+                        </select>
+                        
+                        <button type="submit" class="pay-now">Pay Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Popup Container end -->
           
           <!-- Hamburger Button for Mobile -->
           <button id="unique-hamburger" class="unique-hamburger">
@@ -263,91 +311,116 @@ document.getElementById("unique-close-popup").addEventListener("click", function
         <div class="blog-posts">
             <!-- Blog Post 1 -->
             <article class="post">
-                <img src="/src/pages/AboutPage/Image/achive-1.jpg" alt="Blog Image 1">
+                <a href="/src/pages/AboutPage/Image/achive-1.jpg">
+                    <img src="/src/pages/AboutPage/Image/achive-1.jpg" alt="Blog Image 1">
+                </a>
                 <div class="post-content">
                     <h3>Seva Samman 2024</h3>
                     <p>Join us in celebrating the 3rd Foundation Day of Seva Samman on 12th May 2024 at Shatabdi Bhawan, Cuttack.</p>
-                    <i> 3rd Foundation Day Celebration</i>
-                  <!--  <a href="#" class="read-more">All Blogs</a> -->
+                    <i>3rd Foundation Day Celebration</i>
+                    <!-- <a href="#" class="read-more">All Blogs</a> -->
                 </div>
             </article>
 
             <!-- Blog Post 2 -->
             <article class="post">
-                <img src="/src/pages/AboutPage/Image/achive-2.jpeg" alt="Blog Image 2">
+                <a href="/src/pages/AboutPage/Image/achive-2.jpeg">
+                    <img src="/src/pages/AboutPage/Image/achive-2.jpeg" alt="Blog Image 2">
+                </a>
                 <div class="post-content">
                     <h3>Sradha Sakti Seba Sanman</h3>
                     <p>The Sradha Sakti Seba Sanman (Janmangal) JM Seba Sanman 2023 award is a testament to the Utkal Foundation's dedicated service and impactful work in the community. </p>
-                   <!--  <a href="#" class="read-more">All Blogs</a> -->
+                    <!-- <a href="#" class="read-more">All Blogs</a> -->
                 </div>
             </article>
 
             <!-- Blog Post 3 -->
             <article class="post">
-                <img src="/src/pages/AboutPage/Image/achive-3.jpeg" alt="Blog Image 3">
+                <a href="/src/pages/AboutPage/Image/achive-3.jpeg">
+                    <img src="/src/pages/AboutPage/Image/achive-3.jpeg" alt="Blog Image 3">
+                </a>
                 <div class="post-content">
                     <h3>Sambhaba Charitable Trust</h3>
                     <p>We are honored to receive the certificate of appreciation from Sambhaba Charitable Trust in recognition of our service and dedication.</p>
-                   <!--  <a href="#" class="read-more">All Blogs</a> -->
+                    <!-- <a href="#" class="read-more">All Blogs</a> -->
                 </div>
             </article>
+
             <!-- Blog Post 7 -->
             <article class="post">
-                <img src="/src/pages/AboutPage/Image/achive-7.jpg" alt="Blog Image 3">
+                <a href="/src/pages/AboutPage/Image/achive-7.jpg">
+                    <img src="/src/pages/AboutPage/Image/achive-7.jpg" alt="Blog Image 3">
+                </a>
                 <div class="post-content">
                     <h3>Kalia Seva Samman 2022</h3>
                     <p>We are honored to receive the Kalia Seva Samman 2022 and certificate of appreciation from the Kalia Seva Foundation in recognition of our service and dedication.</p>
-                    <!--  <a href="#" class="read-more">All Blogs</a> -->
+                    <!-- <a href="#" class="read-more">All Blogs</a> -->
                 </div>
             </article>
+
             <!-- Blog Post 8 -->
             <article class="post">
-                <img src="/src/pages/AboutPage/Image/achive-8.jpg" alt="Blog Image 3">
+                <a href="/src/pages/AboutPage/Image/achive-8.jpg">
+                    <img src="/src/pages/AboutPage/Image/achive-8.jpg" alt="Blog Image 3">
+                </a>
                 <div class="post-content">
                     <h3>Seva Samman by The Little Angel Social Service Organization</h3>
                     <p>We are deeply honored to receive the Seva Samman from The Little Angel Social Service Organization in recognition of our dedication to community service and positive impact on society.</p>
                     <i>Dand Sundarpura, Kodandapur, Jajpur</i>
-                    <!--  <a href="#" class="read-more">All Blogs</a> -->
+                    <!-- <a href="#" class="read-more">All Blogs</a> -->
                 </div>
             </article>
+
             <!-- Blog Post 9 -->
             <article class="post">
-                <img src="/src/pages/AboutPage/Image/achive-9.jpeg" alt="Blog Image 3">
+                <a href="/src/pages/AboutPage/Image/achive-9.jpeg">
+                    <img src="/src/pages/AboutPage/Image/achive-9.jpeg" alt="Blog Image 3">
+                </a>
                 <div class="post-content">
                     <h3>Utkal Gaurav Seva Samman 2023</h3>
                     <p>We are honored to receive the prestigious Utkal Gaurav Seva Samman 2023, acknowledging our dedicated service to the community. This recognition inspires us to continue our mission with pride and commitment.</p>
-                   <!--  <a href="#" class="read-more">All Blogs</a> -->
+                    <!-- <a href="#" class="read-more">All Blogs</a> -->
                 </div>
             </article>
+
             <!-- Blog Post 10 -->
             <article class="post">
-                <img src="/src/pages/AboutPage/Image/achive-10.jpg" alt="Blog Image 3">
+                <a href="/src/pages/AboutPage/Image/achive-10.jpg">
+                    <img src="/src/pages/AboutPage/Image/achive-10.jpg" alt="Blog Image 3">
+                </a>
                 <div class="post-content">
                     <h3>6th Annual Festival 2022</h3>
                     <p>We are deeply honored to be awarded the State-Level Talent Award by the Adishakti Youth Council. This recognition inspires us to continue our commitment to excellence and community service.</p>
                     <i>Location: Alarpur, Nakhara, Choudwar, Cuttack</i>
-                    <!--  <a href="#" class="read-more">All Blogs</a> -->
+                    <!-- <a href="#" class="read-more">All Blogs</a> -->
                 </div>
             </article>
+
             <!-- Blog Post 11 -->
             <article class="post">
-                <img src="/src/pages/AboutPage/Image/achive-11.jpg" alt="Blog Image 3">
+                <a href="/src/pages/AboutPage/Image/achive-11.jpg">
+                    <img src="/src/pages/AboutPage/Image/achive-11.jpg" alt="Blog Image 3">
+                </a>
                 <div class="post-content">
                     <h3>Maha Corona Yoddha Samman</h3>
                     <p>We are proud to announce that we have been honored with the Maha Corona Yoddha Samman from Gaudapattana, Chhatia, Mahanga, and Cuttack in recognition of our significant contributions to combating the COVID-19 pandemic.</p>
                     <i>Date: March 12, 2021</i>
-                 <!--  <a href="#" class="read-more">All Blogs</a> -->
+                    <!-- <a href="#" class="read-more">All Blogs</a> -->
                 </div>
             </article>
+
             <!-- Blog Post 12 -->
             <article class="post">
-                <img src="/src/pages/AboutPage/Image/achive-12.jpg" alt="Blog Image 3">
+                <a href="/src/pages/AboutPage/Image/achive-12.jpg">
+                    <img src="/src/pages/AboutPage/Image/achive-12.jpg" alt="Blog Image 3">
+                </a>
                 <div class="post-content">
                     <h3>Maa Mangala Utkarsha Seva Samman 2021</h3>
                     <p>Recognizing outstanding contributions to community service and excellence in humanitarian efforts.</p>
-                <!--  <a href="#" class="read-more">All Blogs</a> -->
+                    <!-- <a href="#" class="read-more">All Blogs</a> -->
                 </div>
             </article>
+
         </div>
     </div>
 </section>
@@ -356,5 +429,47 @@ document.getElementById("unique-close-popup").addEventListener("click", function
     <script src="script.js"></script>
     <script src="/src/js/utils/footer.js"></script>
     <script src="/src/js/nav.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const donateButton = document.getElementById("unique-donate-button");
+            const donatePopup = document.getElementById("donatePopup");
+            const closePopup = document.getElementById("closePopup");
+            const tabs = document.querySelectorAll(".tab");
+            const tabContents = document.querySelectorAll(".tab-content");
+        
+            // Show popup when "Donate" button is clicked
+            donateButton.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevent default navigation
+                donatePopup.style.display = "block";
+            });
+        
+            // Close the popup when the close button is clicked
+            closePopup.addEventListener("click", () => {
+                donatePopup.style.display = "none";
+            });
+        
+            // Tab functionality
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    // Remove active classes
+                    tabs.forEach((t) => t.classList.remove("active"));
+                    tabContents.forEach((tc) => tc.classList.remove("active"));
+        
+                    // Add active classes
+                    tab.classList.add("active");
+                    document.getElementById(tab.dataset.target).classList.add("active");
+                });
+            });
+        
+            // Payment form submission
+            document.getElementById("paymentForm").addEventListener("submit", (event) => {
+                event.preventDefault();
+                alert("Thank you for your donation!");
+                donatePopup.style.display = "none";
+            });
+        });
+        </script>
     </body>
+
 </html>

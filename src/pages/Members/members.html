@@ -28,6 +28,56 @@
             <li><a href="/src/pages/contactPage/contact.html" class="unique-nav-link">Contact</a></li>
             <li><a href="/src/pages/Members/members.html" id="unique-donate-button" class="unique-donate-btn">Donate</a></li>
           </ul>
+
+          <!-- Popup Container -->
+        <div id="donatePopup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <span class="close-btn" id="closePopup">&times;</span>
+                <h2>Support Our Cause</h2>
+                <p>Your contributions help us make a difference!</p>
+        
+                <!-- Payment Method Tabs -->
+                <div class="tab-container">
+                    <button class="tab active" data-target="qr-code">QR Code</button>
+                    <button class="tab" data-target="bank-details">Bank Details</button>
+                    <button class="tab" data-target="online-payment">Online Payment</button>
+                </div>
+        
+                <!-- Tab Content -->
+                <div class="tab-content active" id="qr-code">
+                    <h3>Scan QR Code</h3>
+                    <img src="qrcode.png" alt="QR Code" class="qr-code">
+                    <p>Use any UPI app to scan the QR code and donate.</p>
+                </div>
+        
+                <div class="tab-content" id="bank-details">
+                    <h3>Bank Account Details</h3>
+                    <p><strong>Account Number:</strong> 09940110152812</p>
+                    <p><strong>IFSC Code:</strong> UCBA0000994</p>
+                    <p><strong>Bank Name:</strong> UCO BANK OF INDIA </p>
+                </div>
+        
+                <div class="tab-content" id="online-payment">
+                    <h3>Online Payment</h3>
+                    <form id="paymentForm">
+                        <label for="amount">Enter Amount (₹):</label>
+                        <input type="number" id="amount" name="amount" placeholder="e.g., 500" required>
+                        
+                        <label for="paymentMethod">Choose Payment Method:</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="creditCard">Credit Card</option>
+                            <option value="debitCard">Debit Card</option>
+                            <option value="netBanking">Net Banking</option>
+                            <option value="wallet">Wallet</option>
+                        </select>
+                        
+                        <button type="submit" class="pay-now">Pay Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Popup Container end -->
+
           <!-- Hamburger Button for Mobile -->
           <button id="unique-hamburger" class="unique-hamburger">
             <i class="fas fa-bars"></i>
@@ -211,9 +261,9 @@ document.getElementById("unique-close-popup").addEventListener("click", function
                     <label>Select Membership Amount:</label>
                     <select id="membershipAmount" name="membershipAmount" required>
                         <option value="">Select Membership Amount</option>
-                        <option value="100">₹100</option>
-                        <option value="200">₹200</option>
-                        <option value="500">₹500</option>
+                        <option value="1500">₹1500</option>
+                        <option value="2000">₹2000</option>
+                        <option value="2500">₹2500</option>
                     </select>
                 </div>
             </fieldset>
@@ -424,6 +474,47 @@ document.getElementById("unique-close-popup").addEventListener("click", function
     <script src="/src/pages/Members/form.js"></script>
     <script src="/src/js/utils/footer.js"></script>
     <script src="/src/js/nav.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const donateButton = document.getElementById("unique-donate-button");
+            const donatePopup = document.getElementById("donatePopup");
+            const closePopup = document.getElementById("closePopup");
+            const tabs = document.querySelectorAll(".tab");
+            const tabContents = document.querySelectorAll(".tab-content");
+        
+            // Show popup when "Donate" button is clicked
+            donateButton.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevent default navigation
+                donatePopup.style.display = "block";
+            });
+        
+            // Close the popup when the close button is clicked
+            closePopup.addEventListener("click", () => {
+                donatePopup.style.display = "none";
+            });
+        
+            // Tab functionality
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    // Remove active classes
+                    tabs.forEach((t) => t.classList.remove("active"));
+                    tabContents.forEach((tc) => tc.classList.remove("active"));
+        
+                    // Add active classes
+                    tab.classList.add("active");
+                    document.getElementById(tab.dataset.target).classList.add("active");
+                });
+            });
+        
+            // Payment form submission
+            document.getElementById("paymentForm").addEventListener("submit", (event) => {
+                event.preventDefault();
+                alert("Thank you for your donation!");
+                donatePopup.style.display = "none";
+            });
+        });
+        </script>
 
 </body>
 </html>

@@ -168,3 +168,5 @@ window.addEventListener('resize', () => {
 // Start automatic sliding
 startAutoSlide();
 
+
+
